@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241108153707">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241111171039">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
 <body class="bg-slate-100 dark:bg-slate-800">
 	<div class="wrapper">
 		<header class="header bg-white dark:bg-[#020617] min-h-16 py-4">
-			<div class="header__content px-10 flex items-center gap-4 justify-between">
+			<div class="header__content sm:px-10 px-4 flex items-center gap-4 justify-between">
 				<a href="#" class="header__logo">
 					<svg width="123" height="31" viewBox="0 0 123 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[122px] h-[29.82px]" preserveAspectRatio="none">
 						<path d="M114.727 23.3841C113.106 23.3841 111.666 23.0428 110.407 22.3601C109.17 21.6775 108.199 20.7175 107.495 19.4801C106.791 18.2428 106.439 16.8241 106.439 15.2241C106.439 13.5601 106.78 12.0988 107.463 10.8401C108.167 9.56014 109.138 8.55747 110.375 7.83214C111.634 7.10681 113.095 6.74414 114.759 6.74414C116.338 6.74414 117.724 7.08547 118.919 7.76814C120.135 8.45081 121.074 9.38947 121.735 10.5841C122.418 11.7575 122.759 13.0908 122.759 14.5841C122.759 14.7975 122.759 15.0428 122.759 15.3201C122.759 15.5761 122.738 15.8428 122.695 16.1201H109.511V13.4641H118.375C118.311 12.4828 117.938 11.6935 117.255 11.0961C116.594 10.4988 115.762 10.2001 114.759 10.2001C114.012 10.2001 113.33 10.3708 112.711 10.7121C112.092 11.0321 111.602 11.5228 111.239 12.1841C110.876 12.8455 110.695 13.6881 110.695 14.7121V15.6401C110.695 16.5148 110.866 17.2721 111.207 17.9121C111.548 18.5308 112.018 19.0108 112.615 19.3521C113.234 19.6935 113.927 19.8641 114.695 19.8641C115.484 19.8641 116.146 19.6935 116.679 19.3521C117.212 18.9895 117.618 18.5308 117.895 17.9761H122.311C121.991 18.9788 121.479 19.8961 120.775 20.7281C120.071 21.5388 119.207 22.1895 118.183 22.6801C117.159 23.1495 116.007 23.3841 114.727 23.3841Z" fill="#2563EB"></path>
@@ -29,7 +29,7 @@
 					</svg>
 				</a>
 				<nav class="menu__body">
-					<ul class="menu__list flex items-center h-10 gap-2">
+					<ul class="menu__list items-center h-10 gap-2 lg:flex hidden">
 
 						<li class="menu__item">
 							<a href="#" class="menu__link flex items-center gap-2 px-4 py-2 rounded-lg text-slate-900 min-h-11 --ACTIVE-(delete-this-class)-> bg-slate-100 border border-slate-200 transition-colors active:bg-slate-300 hover:bg-slate-200 dark:bg-[#1E293B] dark:border-[#1E293B] dark:text-slate-50 dark:hover:bg-[#1E293B]/80 dark:hover:border-[#1E293B]/80 dark:active:bg-[#1E293B]/50 dark:active:border-[#1E293B]/50">
@@ -82,47 +82,121 @@
 						</li>
 					</ul>
 				</nav>
+				<div class="flex items-center gap-3">
+					<button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+						<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+						</svg>
+						<svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+						</svg>
+					</button>
+					<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex justify-start items-center relative overflow-hidden gap-1.5 pl-1 pr-2 py-1 rounded-lg transition-colors text-sm font-medium text-left text-slate-900 bg-white border border-slate-200 hover:bg-slate-50 dark:bg-[#020617] dark:border-slate-800 dark:text-slate-50 dark:hover:bg-[#020617]/80 dark:hover:border-slate-800/80" type="button">
+						<img src="img/image.webp" class="w-8 h-8 rounded-full" alt="Image">
+						<span>Name</span>
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+							<path d="M10 12.25L5.5 7.75H14.5L10 12.25Z" fill="#64748B"></path>
+						</svg>
+					</button>
 
-				<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex justify-start items-center relative overflow-hidden gap-1.5 pl-1 pr-2 py-1 rounded-lg transition-colors text-sm font-medium text-left text-slate-900 bg-white border border-slate-200 hover:bg-slate-50 dark:bg-[#020617] dark:border-slate-800 dark:text-slate-50 dark:hover:bg-[#020617]/80 dark:hover:border-slate-800/80" type="button">
-					<img src="img/image.webp" class="w-8 h-8 rounded-full" alt="Image">
-					<span>Name</span>
-					<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
-						<path d="M10 12.25L5.5 7.75H14.5L10 12.25Z" fill="#64748B"></path>
-					</svg>
-				</button>
-
-				<!-- Dropdown menu -->
-				<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-					<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-						<li>
-							<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-						</li>
-						<li>
-							<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-						</li>
-						<li>
-							<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-						</li>
-						<li>
-							<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-						</li>
-					</ul>
+					<!-- Dropdown menu -->
+					<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+						<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+							</li>
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+							</li>
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+							</li>
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 
 			</div>
-			<button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-				<svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-				</svg>
-				<svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
-				</svg>
-			</button>
-		</header>
-		<main class="page grid grid-cols-[460px_1fr] gap-10">
-			<aside class="sidebar pl-10 py-4 pr-6 bg-white dark:bg-[#020617]">
-				<p class="text-2xl font-semibold text-left text-slate-900 dark:text-slate-50 mb-3">Filter</p>
 
+		</header>
+
+		<div class="navbar-mob fixed bottom-0 left-0 right-0 z-[30] md:hidden block">
+			<nav class="menu__body">
+				<ul class="menu__list flex items-center min-h-10 gap-5 justify-center bg-[#020617] py-2">
+					<li>
+						<a href="#" class="flex flex-col items-center gap-1">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="xMidYMid meet">
+								<path d="M10.7749 19C15.1932 19 18.7749 15.4183 18.7749 11C18.7749 6.58172 15.1932 3 10.7749 3C6.35662 3 2.7749 6.58172 2.7749 11C2.7749 15.4183 6.35662 19 10.7749 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M21.1249 21.35L16.7749 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="flex-grow-0 flex-shrink-0 text-sm font-medium text-justify text-white">Search</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="flex flex-col items-center gap-1">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="xMidYMid meet">
+								<g clip-path="url(#clip0_2226_13378)">
+									<path d="M15.2 2H6.69995C6.16952 2 5.66081 2.21071 5.28574 2.58579C4.91066 2.96086 4.69995 3.46957 4.69995 4V20C4.69995 20.5304 4.91066 21.0391 5.28574 21.4142C5.66081 21.7893 6.16952 22 6.69995 22H18.7C19.2304 22 19.7391 21.7893 20.1142 21.4142C20.4892 21.0391 20.7 20.5304 20.7 20V7.5L15.2 2Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M14.7 0V8H21.825" stroke="#020617" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0_2226_13378">
+										<rect width="24" height="24" fill="white" transform="translate(0.699951)"></rect>
+									</clipPath>
+								</defs>
+							</svg>
+							<p class="text-sm font-medium text-justify text-slate-500">
+								My deals
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="flex flex-col items-center gap-1">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="xMidYMid meet">
+								<path d="M22.8874 8.9625L16.0999 7.9125L13.0249 1.4625C12.7999 1.0125 12.1999 1.0125 11.9749 1.4625L8.89994 7.95L2.14994 8.9625C1.66244 9.0375 1.47494 9.675 1.84994 10.0125L6.76244 15.075L5.59994 22.1625C5.52494 22.65 6.01244 23.0625 6.46244 22.7625L12.5749 19.425L18.6499 22.7625C19.0624 22.9875 19.5874 22.6125 19.4749 22.1625L18.3124 15.075L23.2249 10.0125C23.5249 9.675 23.3749 9.0375 22.8874 8.9625Z" fill="#475569"></path>
+							</svg>
+							<p class="text-sm font-medium text-justify text-slate-500">
+								Favorites
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="flex flex-col items-center gap-1">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="xMidYMid meet">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4248 22.75C19.5294 22.75 20.4248 21.8546 20.4248 20.75V20.0603C20.4248 18.1878 19.8298 16.392 18.7706 15.0679C17.7115 13.7439 16.2749 13 14.7771 13H8.32253C6.82466 13 5.38814 13.7439 4.32899 15.0679C3.26983 16.392 2.6748 18.1878 2.6748 20.0603L2.67481 20.75C2.67481 21.8546 3.57024 22.75 4.67481 22.75H18.4248Z" fill="#475569"></path>
+								<path d="M11.6748 10C13.8839 10 15.6748 8.20914 15.6748 6C15.6748 3.79086 13.8839 2 11.6748 2C9.46567 2 7.6748 3.79086 7.6748 6C7.6748 8.20914 9.46567 10 11.6748 10Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="text-sm font-medium text-justify text-slate-500">
+								Account
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="flex flex-col items-center gap-1">
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-6 h-6 relative" preserveAspectRatio="xMidYMid meet">
+								<path d="M12.0999 13.625C12.9973 13.625 13.7249 12.8975 13.7249 12C13.7249 11.1025 12.9973 10.375 12.0999 10.375C11.2024 10.375 10.4749 11.1025 10.4749 12C10.4749 12.8975 11.2024 13.625 12.0999 13.625Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M20.0999 13.625C20.9973 13.625 21.7249 12.8975 21.7249 12C21.7249 11.1025 20.9973 10.375 20.0999 10.375C19.2024 10.375 18.4749 11.1025 18.4749 12C18.4749 12.8975 19.2024 13.625 20.0999 13.625Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+								<path d="M4.09985 13.625C4.99732 13.625 5.72485 12.8975 5.72485 12C5.72485 11.1025 4.99732 10.375 4.09985 10.375C3.20239 10.375 2.47485 11.1025 2.47485 12C2.47485 12.8975 3.20239 13.625 4.09985 13.625Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<p class="text-sm font-medium text-justify text-slate-500">More</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<main class="page grid lg:grid-cols-[460px_1fr] gap-10 md:pb-0 pb-14">
+			<aside id="sidebar" class="sidebar pl-10 py-4 pr-6 bg-white dark:bg-[#020617] lg:block hidden lg:relative fixed inset-0 z-[30] overflow-auto">
+				<div class="flex items-center gap-3 justify-between">
+					<p class="text-2xl font-semibold text-left text-slate-900 dark:text-slate-50 mb-3">Filter</p>
+					<button type="button" class="sidebar-close lg:hidden flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-slate-100/50 border border-slate-200 dark:text-white dark:bg-blue-600 dark:border-transparent">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="xMidYMid meet">
+							<path d="M12 4L4 12" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+							<path d="M4 4L12 12" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+						</svg>
+					</button>
+				</div>
 				<div id="accordion-color" class="divide-y dark:divide-gray-800" data-accordion="open">
 					<div class="line py-2">
 						<h2 id="accordion-color-heading-1">
@@ -265,29 +339,18 @@
 						<div id="accordion-color-body-5" class="hidden" aria-labelledby="accordion-color-heading-5">
 							<div class="py-2">
 								<p class="text-base text-left text-slate-500 dark:text-slate-400 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur impedit a reiciendis, maiores eum tempore.</p>
-
-
-
-
-								<div id="date-range-picker" date-rangepicker class="flex items-center">
-									<div class="relative">
-										<div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
-											<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-												<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-											</svg>
-										</div>
-										<input id="datepicker-range-start" name="start" type="text" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50 dark:bg-slate-800/50 dark:border-slate-800 dark:text-slate-50 dark:hover:bg-slate-700/50 dark:hover:border-slate-700/50 placeholder:text-slate-900 dark:placeholder:text-slate-50" placeholder="Select date start">
+								<div class="relative">
+									<div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
+										<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+											<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+										</svg>
 									</div>
-									<span class="mx-4 text-gray-500">to</span>
-									<div class="relative">
-										<div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
-											<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-												<path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-											</svg>
-										</div>
-										<input id="datepicker-range-end" name="end" type="text" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50 dark:bg-slate-800/50 dark:border-slate-800 dark:text-slate-50 dark:hover:bg-slate-700/50 dark:hover:border-slate-700/50 placeholder:text-slate-900 dark:placeholder:text-slate-50" placeholder="Select date end">
-									</div>
+									<input id="datepicker" name="end" data-modal-target="default-modal" data-modal-toggle="default-modal" type="text" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50 dark:bg-slate-800/50 dark:border-slate-800 dark:text-slate-50 dark:hover:bg-slate-700/50 dark:hover:border-slate-700/50 placeholder:text-slate-900 dark:placeholder:text-slate-50" placeholder="Select date">
 								</div>
+
+
+
+
 
 
 
@@ -302,7 +365,7 @@
 
 			</aside>
 			<div class="page-content max-w-[56.25rem] mx-auto">
-				<div class="content py-10 pr-4">
+				<div class="content py-10 pr-4 lg:pl-0 pl-4">
 
 
 					<div class="filter flex justify-end items-center mb-4">
@@ -342,8 +405,8 @@
 						<div class="bg-white shadow-lg rounded-lg p-6 border border-slate-200 dark:bg-[#020617] dark:border-slate-800">
 							<div class="flex flex-col justify-center items-start flex-grow gap-3">
 								<div class="flex justify-start items-center self-stretch overflow-hidden gap-4">
-									<div class="flex items-center justify-between flex-grow gap-4">
-										<div class="flex justify-start items-start self-stretch relative gap-4">
+									<div class="flex items-center justify-between flex-grow gap-4 flex-wrap sm:flex-row flex-col-reverse">
+										<div class="flex  items-start self-stretch relative gap-4 sm:justify-start justify-center">
 											<div class="relative rounded-full bg-[#d9d9d9]">
 												<img class="sm:w-14 sm:h-14 h-9 w-9 object-cover rounded-full" src="img/avatar-image.webp" />
 											</div>
@@ -390,7 +453,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex justify-between w-full gap-4 items-center">
+								<div class="flex justify-between w-full gap-4 items-center sm:flex-row flex-col">
 									<div class="flex-1">
 										<div class="flex relative gap-2.5">
 											<p class="text-base text-left text-slate-900 dark:text-slate-50">
@@ -402,8 +465,8 @@
 
 									</div>
 
-									<div class="flex items-center gap-3">
-										<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Expand details</button>
+									<div class="flex items-center gap-3 sm:w-auto w-full">
+										<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex-1">Expand details</button>
 										<button type="button" class="py-2.5 px-2.5 w-10 h-10 text-sm font-medium focus:outline-none rounded-lg bg-slate-100/50 border border-slate-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white dark:bg-slate-800/50 dark:border-slate-800">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 												<path d="M3.41729 14.3111L3.41734 14.3111L3.4185 14.3039L4.0685 10.2789L4.10861 10.0306L3.93309 9.85037L1.13309 6.97537L1.13312 6.97534L1.12845 6.97067C0.970958 6.81317 0.901834 6.55978 0.97836 6.29449C1.00009 6.22662 1.03344 6.16502 1.0749 6.11154V6.49922V6.49922V6.49923V6.49924V6.49924V6.49925V6.49925V6.49926V6.49927V6.49927V6.49928V6.49929V6.4993V6.49931V6.49932V6.49933V6.49934V6.49936V6.49937V6.49938V6.49939V6.49941V6.49942V6.49944V6.49945V6.49947V6.49949V6.49951V6.49952V6.49954V6.49956V6.49958V6.4996V6.49962V6.49964V6.49966V6.49969V6.49971V6.49973V6.49976V6.49978V6.49981V6.49983V6.49986V6.49988V6.49991V6.49994V6.49997V6.49999V6.50002V6.50005V6.50008V6.50011V6.50014V6.50018V6.50021V6.50024V6.50027V6.50031V6.50034V6.50038V6.50041V6.50045V6.50048V6.50052V6.50056V6.50059V6.50063V6.50067V6.50071V6.50075V6.50079V6.50083V6.50087V6.50091V6.50095V6.501V6.50104V6.50108V6.50113V6.50117V6.50122V6.50126V6.50131V6.50135V6.5014V6.50145V6.5015V6.50154V6.50159V6.50164V6.50169V6.50174V6.50179V6.50184V6.50189V6.50195V6.502V6.50205V6.5021V6.50216V6.50221V6.50227V6.50232V6.50238V6.50243V6.50249V6.50255V6.5026V6.50266V6.50272V6.50278V6.50284V6.5029V6.50296V6.50302V6.50308V6.50314V6.5032V6.50326V6.50333V6.50339V6.50345V6.50352V6.50358V6.50364V6.50371V6.50378V6.50384V6.50391V6.50397V6.50404V6.50411V6.50418V6.50425V6.50432V6.50438V6.50445V6.50452V6.5046V6.50467V6.50474V6.50481V6.50488V6.50495V6.50503V6.5051V6.50518V6.50525V6.50532V6.5054V6.50547V6.50555V6.50563V6.5057V6.50578V6.50586V6.50594V6.50601V6.50609V6.50617V6.50625V6.50633V6.50641V6.50649V6.50657V6.50665V6.50674V6.50682V6.5069V6.50698V6.50707V6.50715V6.50723V6.50732V6.5074V6.50749V6.50757V6.50766V6.50774V6.50783V6.50792V6.50801V6.50809V6.50818V6.50827V6.50836V6.50845V6.50854V6.50863V6.50872V6.50881V6.5089V6.50899V6.50908V6.50917V6.50927V6.50936V6.50945V6.50954V6.50964V6.50973V6.50983V6.50992V6.51002V6.51011V6.51021V6.5103V6.5104V6.5105V6.51059V6.51069V6.51079V6.51089V6.51098V6.51108V6.51118V6.51128V6.51138V6.51148V6.51158V6.51168V6.51178V6.51188V6.51199V6.51209V6.51219V6.51229V6.51239V6.5125V6.5126V6.51271V6.51281V6.51291V6.51302V6.51312V6.51323V6.51333V6.51344V6.51355V6.51365V6.51376V6.51387V6.51397V6.51408V6.51419V6.5143V6.51441V6.51452V6.51463V6.51473V6.51484V6.51495V6.51506V6.51517V6.51529V6.5154V6.51551V6.51562V6.51573V6.51584V6.51596V6.51607V6.51618V6.5163V6.51641V6.51652V6.51664V6.51675V6.51687V6.51698V6.5171V6.51721V6.51733V6.51744V6.51756V6.51768V6.51779V6.51791V6.51803V6.51815V6.51826V6.51838V6.5185V6.51862V6.51874V6.51886V6.51898V6.5191V6.51922V6.51934V6.51946V6.51958V6.5197V6.51982V6.51994V6.52006V6.52018V6.5203V6.52043V6.52055V6.52067V6.52079V6.52092V6.52104V6.52116V6.52129V6.52141V6.52154V6.52166V6.52179V6.52191V6.52204V6.52216V6.52229V6.52241V6.52254V6.52266V6.52279V6.52292V6.52304V6.52317V6.5233V6.52343V6.52355V6.52368V6.52381V6.52394V6.52407V6.5242V6.52432V6.52445V6.52458V6.52471V6.52484V6.52497V6.5251V6.52523V6.52536V6.52549V6.52562V6.52575V6.52589V6.52602V6.52615V6.52628V6.52641V6.52654V6.52668V6.52681V6.52694V6.52707V6.52721V6.52734V6.52747V6.52761V6.52774V6.52787V6.52801V6.52814V6.52828V6.52841V6.52855V6.52868V6.52882V6.52895V6.52909V6.52922V6.52936V6.52949V6.52963V6.52977V6.5299V6.53004V6.53017V6.53031V6.53045V6.53059V6.53072V6.53086V6.531V6.53113V6.53127V6.53141V6.53155V6.53169V6.53182V6.53196V6.5321V6.53224V6.53238V6.53252V6.53266V6.5328V6.53294V6.53307V6.53321V6.53335V6.53349V6.53363V6.53377V6.53391V6.53405V6.53419V6.53433V6.53448V6.53462V6.53476V6.5349V6.53504V6.53518V6.53532V6.53546V6.5356V6.53575V6.53589V6.53603V6.53617V6.53631V6.53646V6.5366V6.53674V6.53688V6.53702V6.53717V6.53731V6.53745V6.5376V6.53774V6.53788V6.53802V6.53817V6.53831V6.53845V6.5386V6.53874V6.53889V6.53903V6.53917V6.53932V6.53946V6.5396V6.53975V6.53989V6.54004V6.54018V6.54033V6.54047V6.54061V6.54076V6.5409V6.54105V6.54119V6.54134V6.54148V6.54163V6.54177V6.54192V6.54206V6.54221V6.54235V6.5425V6.54264V6.54279V6.54293V6.54308V6.54323V6.54337V6.54352V6.54366V6.54381V6.54395V6.5441V6.54425V6.54439V6.54454V6.54468V6.54483V6.54498V6.54512V6.54527V6.54541V6.54556V6.54571V6.54585V6.546V6.54614V6.54629V6.54644V6.54658V6.54673V6.54688V6.54702V6.54717V6.54732V6.54746V6.54761V6.54775V6.5479V6.54805V6.54819V6.54834V6.54849V6.54863V6.54878V6.54893V6.54907V6.54922V6.75263L1.2169 6.89827L4.1419 9.89827L4.14187 9.8983L4.14634 9.90277C4.19181 9.94823 4.23793 10.0576 4.22845 10.1871L3.55631 14.3444L3.5499 14.3841V14.4242V14.4242V14.4242V14.4242V14.4242V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4249V14.4249V14.4249V14.4249V14.4249V14.4249V14.4249V14.425V14.425V14.425V14.425V14.425V14.425V14.425V14.4251V14.4251V14.4251V14.4251V14.4251V14.4251V14.4252V14.4252V14.4252V14.4252V14.4252V14.4252V14.4253V14.4253V14.4253V14.4253V14.4253V14.4253V14.4254V14.4254V14.4254V14.4254V14.4254V14.4255V14.4255V14.4255V14.4255V14.4255V14.4256V14.4256V14.4256V14.4256V14.4256V14.4257V14.4257V14.4257V14.4257V14.4258V14.4258V14.4258V14.4258V14.4258V14.4259V14.4259V14.4259V14.4259V14.426V14.426V14.426V14.426V14.4261V14.4261V14.4261V14.4261V14.4262V14.4262V14.4262V14.4263V14.4263V14.4263V14.4263V14.4264V14.4264V14.4264V14.4265V14.4265V14.4265V14.4265V14.4266V14.4266V14.4266V14.4267V14.4267V14.4267V14.4268V14.4268V14.4268V14.4269V14.4269V14.4269V14.427V14.427V14.427V14.4271V14.4271V14.4271V14.4272V14.4272V14.4272V14.4273V14.4273V14.4273V14.4274V14.4274V14.4275V14.4275V14.4275V14.4276V14.4276V14.4276V14.4277V14.4277V14.4278V14.4278V14.4278V14.4279V14.4279V14.428V14.428V14.4281V14.4281V14.4281V14.4282V14.4282V14.4283V14.4283V14.4284V14.4284V14.4284V14.4285V14.4285V14.4286V14.4286V14.4287V14.4287V14.4288V14.4288V14.4289V14.4289V14.429V14.429V14.429V14.4291V14.4291V14.4292V14.4292V14.4293V14.4293V14.4294V14.4295V14.4295V14.4296V14.4296V14.4297V14.4297V14.4298V14.4298V14.4299V14.4299V14.43V14.43V14.4301V14.4302V14.4302V14.4303V14.4303V14.4304V14.4304V14.4305V14.4306V14.4306V14.4307V14.4307V14.4308V14.4309V14.4309V14.431V14.431V14.4311V14.4312V14.4312V14.4313V14.4313V14.4314V14.4315V14.4315V14.4316V14.4317V14.4317V14.4318V14.4319V14.4319V14.432V14.4321V14.4321V14.4322V14.4323V14.4323V14.4324V14.4325V14.4326V14.4326V14.4327V14.4328V14.4328V14.4329V14.433V14.4331V14.4331V14.4332V14.4333V14.4334V14.4334V14.4335V14.4336V14.4337V14.4337V14.4338V14.4339V14.434V14.434V14.4341V14.4342V14.4343V14.4344V14.4344V14.4345V14.4346V14.4347V14.4348V14.4348V14.4349V14.435V14.4351V14.4352V14.4353V14.4354V14.4354V14.4355V14.4356V14.4357V14.4358V14.4359V14.436V14.4361V14.4361V14.4362V14.4363V14.4364V14.4365V14.4366V14.4367V14.4368V14.4369V14.437V14.4371V14.4372V14.4372V14.4373V14.4374V14.4375V14.4376V14.4377V14.4378V14.4379V14.438V14.4381V14.4382V14.4383V14.4384V14.4385V14.4386V14.4387V14.4388V14.4389V14.439V14.4391V14.4392V14.4393V14.4394V14.4396V14.4397V14.4398V14.4399V14.44V14.4401V14.4402V14.4403V14.4404V14.4405V14.4406V14.4407V14.4409V14.441V14.4411V14.4412V14.4413V14.4414V14.4415V14.4416V14.4418V14.4419V14.442V14.4421V14.4422V14.4423V14.4425V14.4426V14.4427V14.4428V14.4429V14.4431V14.4432V14.4433V14.4434V14.4436V14.4437V14.4438V14.4439V14.4441V14.4442V14.4443V14.4444V14.4446V14.4447V14.4448V14.4449V14.4451V14.4452V14.4453V14.4455V14.4456V14.4457V14.4459V14.446V14.4461V14.4463V14.4464V14.4465V14.4467V14.4468V14.4469V14.4471V14.4472V14.4474V14.4475V14.4476V14.4478V14.4479V14.4481V14.4482V14.4483V14.4485V14.4486V14.4488V14.4489V14.4491V14.4492V14.8054C3.43944 14.6605 3.38841 14.4748 3.41729 14.3111ZM5.70133 4.98919L7.44903 1.31902C7.51718 1.18437 7.61114 1.08654 7.71731 1.02544L7.54749 1.38632L5.74749 5.21132L5.74738 5.21127L5.74299 5.22115C5.71329 5.28798 5.63111 5.35997 5.53495 5.38218L1.49864 6.00507L1.11572 6.06416C1.20512 5.97067 1.32077 5.90988 1.43692 5.89536L1.44574 5.89426L1.45451 5.89284L5.32951 5.26784L5.58853 5.22606L5.70133 4.98919ZM8.44829 1.37798L8.2684 1.01342C8.38809 1.07379 8.4867 1.17364 8.54182 1.29963L8.54529 1.30757L8.54904 1.31538L10.299 4.96538L10.4128 5.20272L10.6729 5.24326L14.5143 5.84192C14.7527 5.88888 14.9352 6.04837 14.9977 6.24836L15.0004 6.25704L15.0034 6.26563C15.0846 6.49565 15.0205 6.74647 14.8463 6.92067L14.8463 6.92058L14.8386 6.92854L12.0636 9.82854L11.8918 10.0081L11.9312 10.2535L12.5812 14.3035L12.5817 14.3064C12.61 14.4764 12.5792 14.6301 12.4999 14.7544V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.449V14.449V14.449V14.449V14.449V14.449V14.449V14.449V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4486V14.4486V14.4486V14.4486V14.4486V14.4486V14.4486V14.4486V14.4485V14.4485V14.4485V14.4485V14.4485V14.4485V14.4485V14.4484V14.4484V14.4484V14.4484V14.4484V14.4484V14.4484V14.4483V14.4483V14.4483V14.4483V14.4483V14.4483V14.4482V14.4482V14.4482V14.4482V14.4482V14.4482V14.4481V14.4481V14.4481V14.4481V14.4481V14.448V14.448V14.448V14.448V14.448V14.4479V14.4479V14.4479V14.4479V14.4479V14.4478V14.4478V14.4478V14.4478V14.4478V14.4477V14.4477V14.4477V14.4477V14.4476V14.4476V14.4476V14.4476V14.4475V14.4475V14.4475V14.4475V14.4474V14.4474V14.4474V14.4474V14.4473V14.4473V14.4473V14.4473V14.4472V14.4472V14.4472V14.4472V14.4471V14.4471V14.4471V14.447V14.447V14.447V14.447V14.4469V14.4469V14.4469V14.4468V14.4468V14.4468V14.4467V14.4467V14.4467V14.4466V14.4466V14.4466V14.4465V14.4465V14.4465V14.4464V14.4464V14.4464V14.4463V14.4463V14.4463V14.4462V14.4462V14.4462V14.4461V14.4461V14.4461V14.446V14.446V14.4459V14.4459V14.4459V14.4458V14.4458V14.4458V14.4457V14.4457V14.4456V14.4456V14.4456V14.4455V14.4455V14.4454V14.4454V14.4453V14.4453V14.4453V14.4452V14.4452V14.4451V14.4451V14.445V14.445V14.445V14.4449V14.4449V14.4448V14.4448V14.4447V14.4447V14.4446V14.4446V14.4445V14.4445V14.4444V14.4444V14.4443V14.4443V14.4442V14.4442V14.4441V14.4441V14.444V14.444V14.4439V14.4439V14.4438V14.4438V14.4437V14.4437V14.4436V14.4436V14.4435V14.4435V14.4434V14.4433V14.4433V14.4432V14.4432V14.4431V14.4431V14.443V14.4429V14.4429V14.4428V14.4428V14.4427V14.4426V14.4426V14.4425V14.4425V14.4424V14.4423V14.4423V14.4422V14.4422V14.4421V14.442V14.442V14.4419V14.4418V14.4418V14.4417V14.4416V14.4416V14.4415V14.4414V14.4414V14.4413V14.4412V14.4412V14.4411V14.441V14.441V14.4409V14.4408V14.4407V14.4407V14.4406V14.4405V14.4405V14.4404V14.4403V14.4402V14.4402V14.4401V14.44V14.4399V14.4399V14.4398V14.4397V14.4396V14.4396V14.4395V14.4394V14.4393V14.4392V14.4392V14.4391V14.439V14.4389V14.4388V14.4388V14.4387V14.4386V14.4385V14.4384V14.4383V14.4383V14.4382V14.4381V14.438V14.4379V14.4378V14.4377V14.4377V14.4376V14.4375V14.4374V14.4373V14.4372V14.4371V14.437V14.4369V14.4368V14.4368V14.4367V14.4366V14.4365V14.4364V14.4363V14.4362V14.4361V14.436V14.4359V14.4358V14.4357V14.4356V14.4355V14.4354V14.4353V14.4352V14.4351V14.435V14.4349V14.4348V14.4347V14.4346V14.4345V14.4344V14.4343V14.4342V14.4341V14.434V14.4339V14.4338V14.4337V14.4336V14.4335V14.4334V14.4332V14.4331V14.433V14.4329V14.4328V14.4327V14.4326V14.4325V14.4324V14.4322V14.4321V14.432V14.4319V14.4318V14.4317V14.4316V14.4314V14.4313V14.4312V14.4311V14.431V14.4309V14.4307V14.4306V14.4305V14.4304V14.4302V14.4301V14.43V14.4299V14.4298V14.4296V14.4295V14.4294V14.4293V14.4291V14.429V14.4289V14.4287V14.4286V14.4285V14.4284V14.4282V14.4281V14.428V14.4278V14.4277V14.4276V14.4274V14.4273V14.4272V14.427V14.4269V14.4268V14.4266V14.4265V14.4264V14.4262V14.4261V14.4259V14.4258V14.4257V14.4255V14.4254V14.4252V14.4251V14.4249V14.4248V14.4247V14.4245V14.4244V14.4242V14.3843L12.4936 14.3449L11.8186 10.1449L11.8171 10.1355L11.8152 10.1262C11.8053 10.0765 11.8169 9.98236 11.9185 9.86237L14.8319 6.8743C14.8985 6.80652 14.9535 6.71511 14.9757 6.60392C14.9976 6.49451 14.9811 6.39933 14.9586 6.33173C14.9368 6.26621 14.9065 6.21765 14.8853 6.1879C14.874 6.17205 14.8631 6.15868 14.8538 6.14788C14.849 6.14241 14.8445 6.13743 14.8403 6.13293L14.8342 6.12649L14.8313 6.1235L14.8298 6.12207L14.8291 6.12136L14.8288 6.12102C14.8286 6.12084 14.8285 6.12067 14.4749 6.47422L14.8285 6.12067L14.713 6.0052L14.5516 5.98014L10.5392 5.35709C10.4216 5.3313 10.3623 5.27144 10.3391 5.21352L10.3319 5.19544L10.3233 5.17798L8.44829 1.37798ZM12.059 15.0499C11.9359 15.0709 11.8091 15.0488 11.6867 14.9838L8.23865 13.1099L7.9999 12.9801L7.76114 13.1099L4.31114 14.9849L4.29132 14.9957L4.27255 15.0082C4.26575 15.0127 4.24336 15.0247 4.19547 15.0346C4.14826 15.0444 4.09051 15.0492 4.0249 15.0492C4.01453 15.0492 4.00413 15.0489 3.99372 15.0483L4.28804 14.8889L7.88804 12.9389L7.88805 12.9389L7.89272 12.9363C7.95828 12.8999 8.05555 12.8882 8.17025 12.9435L11.7618 14.8889L12.059 15.0499Z" fill="currentColor" stroke="currentColor" />
@@ -423,7 +486,8 @@
 
 										<a href="#" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1" class="flex items-center relative gap-2 rounded-lg">
 											<p class="text-base font-medium text-left text-blue-600">
-												Expand details
+												<span>Expand details</span>
+												<span>Hide details</span>
 											</p>
 											<svg data-accordion-icon width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 relative rotate-180" preserveAspectRatio="xMidYMid meet">
 												<path d="M7.99992 3.33398V12.6673M7.99992 12.6673L12.6666 8.00065M7.99992 12.6673L3.33325 8.00065" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -577,7 +641,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="flex justify-between w-full gap-4 items-center">
+								<div class="flex justify-between w-full gap-4 items-center sm:flex-row flex-col">
 									<div class="flex-1">
 										<div class="flex relative gap-2.5">
 											<p class="text-base text-left text-slate-900 dark:text-slate-50">
@@ -589,8 +653,8 @@
 
 									</div>
 
-									<div class="flex items-center gap-3">
-										<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Expand details</button>
+									<div class="flex items-center gap-3 sm:w-auto w-full">
+										<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex-1">Call To Action</button>
 										<button type="button" class="py-2.5 px-2.5 w-10 h-10 text-sm font-medium focus:outline-none rounded-lg bg-slate-100/50 border border-slate-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white dark:bg-slate-800/50 dark:border-slate-800">
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 												<path d="M3.41729 14.3111L3.41734 14.3111L3.4185 14.3039L4.0685 10.2789L4.10861 10.0306L3.93309 9.85037L1.13309 6.97537L1.13312 6.97534L1.12845 6.97067C0.970958 6.81317 0.901834 6.55978 0.97836 6.29449C1.00009 6.22662 1.03344 6.16502 1.0749 6.11154V6.49922V6.49922V6.49923V6.49924V6.49924V6.49925V6.49925V6.49926V6.49927V6.49927V6.49928V6.49929V6.4993V6.49931V6.49932V6.49933V6.49934V6.49936V6.49937V6.49938V6.49939V6.49941V6.49942V6.49944V6.49945V6.49947V6.49949V6.49951V6.49952V6.49954V6.49956V6.49958V6.4996V6.49962V6.49964V6.49966V6.49969V6.49971V6.49973V6.49976V6.49978V6.49981V6.49983V6.49986V6.49988V6.49991V6.49994V6.49997V6.49999V6.50002V6.50005V6.50008V6.50011V6.50014V6.50018V6.50021V6.50024V6.50027V6.50031V6.50034V6.50038V6.50041V6.50045V6.50048V6.50052V6.50056V6.50059V6.50063V6.50067V6.50071V6.50075V6.50079V6.50083V6.50087V6.50091V6.50095V6.501V6.50104V6.50108V6.50113V6.50117V6.50122V6.50126V6.50131V6.50135V6.5014V6.50145V6.5015V6.50154V6.50159V6.50164V6.50169V6.50174V6.50179V6.50184V6.50189V6.50195V6.502V6.50205V6.5021V6.50216V6.50221V6.50227V6.50232V6.50238V6.50243V6.50249V6.50255V6.5026V6.50266V6.50272V6.50278V6.50284V6.5029V6.50296V6.50302V6.50308V6.50314V6.5032V6.50326V6.50333V6.50339V6.50345V6.50352V6.50358V6.50364V6.50371V6.50378V6.50384V6.50391V6.50397V6.50404V6.50411V6.50418V6.50425V6.50432V6.50438V6.50445V6.50452V6.5046V6.50467V6.50474V6.50481V6.50488V6.50495V6.50503V6.5051V6.50518V6.50525V6.50532V6.5054V6.50547V6.50555V6.50563V6.5057V6.50578V6.50586V6.50594V6.50601V6.50609V6.50617V6.50625V6.50633V6.50641V6.50649V6.50657V6.50665V6.50674V6.50682V6.5069V6.50698V6.50707V6.50715V6.50723V6.50732V6.5074V6.50749V6.50757V6.50766V6.50774V6.50783V6.50792V6.50801V6.50809V6.50818V6.50827V6.50836V6.50845V6.50854V6.50863V6.50872V6.50881V6.5089V6.50899V6.50908V6.50917V6.50927V6.50936V6.50945V6.50954V6.50964V6.50973V6.50983V6.50992V6.51002V6.51011V6.51021V6.5103V6.5104V6.5105V6.51059V6.51069V6.51079V6.51089V6.51098V6.51108V6.51118V6.51128V6.51138V6.51148V6.51158V6.51168V6.51178V6.51188V6.51199V6.51209V6.51219V6.51229V6.51239V6.5125V6.5126V6.51271V6.51281V6.51291V6.51302V6.51312V6.51323V6.51333V6.51344V6.51355V6.51365V6.51376V6.51387V6.51397V6.51408V6.51419V6.5143V6.51441V6.51452V6.51463V6.51473V6.51484V6.51495V6.51506V6.51517V6.51529V6.5154V6.51551V6.51562V6.51573V6.51584V6.51596V6.51607V6.51618V6.5163V6.51641V6.51652V6.51664V6.51675V6.51687V6.51698V6.5171V6.51721V6.51733V6.51744V6.51756V6.51768V6.51779V6.51791V6.51803V6.51815V6.51826V6.51838V6.5185V6.51862V6.51874V6.51886V6.51898V6.5191V6.51922V6.51934V6.51946V6.51958V6.5197V6.51982V6.51994V6.52006V6.52018V6.5203V6.52043V6.52055V6.52067V6.52079V6.52092V6.52104V6.52116V6.52129V6.52141V6.52154V6.52166V6.52179V6.52191V6.52204V6.52216V6.52229V6.52241V6.52254V6.52266V6.52279V6.52292V6.52304V6.52317V6.5233V6.52343V6.52355V6.52368V6.52381V6.52394V6.52407V6.5242V6.52432V6.52445V6.52458V6.52471V6.52484V6.52497V6.5251V6.52523V6.52536V6.52549V6.52562V6.52575V6.52589V6.52602V6.52615V6.52628V6.52641V6.52654V6.52668V6.52681V6.52694V6.52707V6.52721V6.52734V6.52747V6.52761V6.52774V6.52787V6.52801V6.52814V6.52828V6.52841V6.52855V6.52868V6.52882V6.52895V6.52909V6.52922V6.52936V6.52949V6.52963V6.52977V6.5299V6.53004V6.53017V6.53031V6.53045V6.53059V6.53072V6.53086V6.531V6.53113V6.53127V6.53141V6.53155V6.53169V6.53182V6.53196V6.5321V6.53224V6.53238V6.53252V6.53266V6.5328V6.53294V6.53307V6.53321V6.53335V6.53349V6.53363V6.53377V6.53391V6.53405V6.53419V6.53433V6.53448V6.53462V6.53476V6.5349V6.53504V6.53518V6.53532V6.53546V6.5356V6.53575V6.53589V6.53603V6.53617V6.53631V6.53646V6.5366V6.53674V6.53688V6.53702V6.53717V6.53731V6.53745V6.5376V6.53774V6.53788V6.53802V6.53817V6.53831V6.53845V6.5386V6.53874V6.53889V6.53903V6.53917V6.53932V6.53946V6.5396V6.53975V6.53989V6.54004V6.54018V6.54033V6.54047V6.54061V6.54076V6.5409V6.54105V6.54119V6.54134V6.54148V6.54163V6.54177V6.54192V6.54206V6.54221V6.54235V6.5425V6.54264V6.54279V6.54293V6.54308V6.54323V6.54337V6.54352V6.54366V6.54381V6.54395V6.5441V6.54425V6.54439V6.54454V6.54468V6.54483V6.54498V6.54512V6.54527V6.54541V6.54556V6.54571V6.54585V6.546V6.54614V6.54629V6.54644V6.54658V6.54673V6.54688V6.54702V6.54717V6.54732V6.54746V6.54761V6.54775V6.5479V6.54805V6.54819V6.54834V6.54849V6.54863V6.54878V6.54893V6.54907V6.54922V6.75263L1.2169 6.89827L4.1419 9.89827L4.14187 9.8983L4.14634 9.90277C4.19181 9.94823 4.23793 10.0576 4.22845 10.1871L3.55631 14.3444L3.5499 14.3841V14.4242V14.4242V14.4242V14.4242V14.4242V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4243V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4244V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4245V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4246V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4247V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4248V14.4249V14.4249V14.4249V14.4249V14.4249V14.4249V14.4249V14.425V14.425V14.425V14.425V14.425V14.425V14.425V14.4251V14.4251V14.4251V14.4251V14.4251V14.4251V14.4252V14.4252V14.4252V14.4252V14.4252V14.4252V14.4253V14.4253V14.4253V14.4253V14.4253V14.4253V14.4254V14.4254V14.4254V14.4254V14.4254V14.4255V14.4255V14.4255V14.4255V14.4255V14.4256V14.4256V14.4256V14.4256V14.4256V14.4257V14.4257V14.4257V14.4257V14.4258V14.4258V14.4258V14.4258V14.4258V14.4259V14.4259V14.4259V14.4259V14.426V14.426V14.426V14.426V14.4261V14.4261V14.4261V14.4261V14.4262V14.4262V14.4262V14.4263V14.4263V14.4263V14.4263V14.4264V14.4264V14.4264V14.4265V14.4265V14.4265V14.4265V14.4266V14.4266V14.4266V14.4267V14.4267V14.4267V14.4268V14.4268V14.4268V14.4269V14.4269V14.4269V14.427V14.427V14.427V14.4271V14.4271V14.4271V14.4272V14.4272V14.4272V14.4273V14.4273V14.4273V14.4274V14.4274V14.4275V14.4275V14.4275V14.4276V14.4276V14.4276V14.4277V14.4277V14.4278V14.4278V14.4278V14.4279V14.4279V14.428V14.428V14.4281V14.4281V14.4281V14.4282V14.4282V14.4283V14.4283V14.4284V14.4284V14.4284V14.4285V14.4285V14.4286V14.4286V14.4287V14.4287V14.4288V14.4288V14.4289V14.4289V14.429V14.429V14.429V14.4291V14.4291V14.4292V14.4292V14.4293V14.4293V14.4294V14.4295V14.4295V14.4296V14.4296V14.4297V14.4297V14.4298V14.4298V14.4299V14.4299V14.43V14.43V14.4301V14.4302V14.4302V14.4303V14.4303V14.4304V14.4304V14.4305V14.4306V14.4306V14.4307V14.4307V14.4308V14.4309V14.4309V14.431V14.431V14.4311V14.4312V14.4312V14.4313V14.4313V14.4314V14.4315V14.4315V14.4316V14.4317V14.4317V14.4318V14.4319V14.4319V14.432V14.4321V14.4321V14.4322V14.4323V14.4323V14.4324V14.4325V14.4326V14.4326V14.4327V14.4328V14.4328V14.4329V14.433V14.4331V14.4331V14.4332V14.4333V14.4334V14.4334V14.4335V14.4336V14.4337V14.4337V14.4338V14.4339V14.434V14.434V14.4341V14.4342V14.4343V14.4344V14.4344V14.4345V14.4346V14.4347V14.4348V14.4348V14.4349V14.435V14.4351V14.4352V14.4353V14.4354V14.4354V14.4355V14.4356V14.4357V14.4358V14.4359V14.436V14.4361V14.4361V14.4362V14.4363V14.4364V14.4365V14.4366V14.4367V14.4368V14.4369V14.437V14.4371V14.4372V14.4372V14.4373V14.4374V14.4375V14.4376V14.4377V14.4378V14.4379V14.438V14.4381V14.4382V14.4383V14.4384V14.4385V14.4386V14.4387V14.4388V14.4389V14.439V14.4391V14.4392V14.4393V14.4394V14.4396V14.4397V14.4398V14.4399V14.44V14.4401V14.4402V14.4403V14.4404V14.4405V14.4406V14.4407V14.4409V14.441V14.4411V14.4412V14.4413V14.4414V14.4415V14.4416V14.4418V14.4419V14.442V14.4421V14.4422V14.4423V14.4425V14.4426V14.4427V14.4428V14.4429V14.4431V14.4432V14.4433V14.4434V14.4436V14.4437V14.4438V14.4439V14.4441V14.4442V14.4443V14.4444V14.4446V14.4447V14.4448V14.4449V14.4451V14.4452V14.4453V14.4455V14.4456V14.4457V14.4459V14.446V14.4461V14.4463V14.4464V14.4465V14.4467V14.4468V14.4469V14.4471V14.4472V14.4474V14.4475V14.4476V14.4478V14.4479V14.4481V14.4482V14.4483V14.4485V14.4486V14.4488V14.4489V14.4491V14.4492V14.8054C3.43944 14.6605 3.38841 14.4748 3.41729 14.3111ZM5.70133 4.98919L7.44903 1.31902C7.51718 1.18437 7.61114 1.08654 7.71731 1.02544L7.54749 1.38632L5.74749 5.21132L5.74738 5.21127L5.74299 5.22115C5.71329 5.28798 5.63111 5.35997 5.53495 5.38218L1.49864 6.00507L1.11572 6.06416C1.20512 5.97067 1.32077 5.90988 1.43692 5.89536L1.44574 5.89426L1.45451 5.89284L5.32951 5.26784L5.58853 5.22606L5.70133 4.98919ZM8.44829 1.37798L8.2684 1.01342C8.38809 1.07379 8.4867 1.17364 8.54182 1.29963L8.54529 1.30757L8.54904 1.31538L10.299 4.96538L10.4128 5.20272L10.6729 5.24326L14.5143 5.84192C14.7527 5.88888 14.9352 6.04837 14.9977 6.24836L15.0004 6.25704L15.0034 6.26563C15.0846 6.49565 15.0205 6.74647 14.8463 6.92067L14.8463 6.92058L14.8386 6.92854L12.0636 9.82854L11.8918 10.0081L11.9312 10.2535L12.5812 14.3035L12.5817 14.3064C12.61 14.4764 12.5792 14.6301 12.4999 14.7544V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4492V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.4491V14.449V14.449V14.449V14.449V14.449V14.449V14.449V14.449V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4489V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4488V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4487V14.4486V14.4486V14.4486V14.4486V14.4486V14.4486V14.4486V14.4486V14.4485V14.4485V14.4485V14.4485V14.4485V14.4485V14.4485V14.4484V14.4484V14.4484V14.4484V14.4484V14.4484V14.4484V14.4483V14.4483V14.4483V14.4483V14.4483V14.4483V14.4482V14.4482V14.4482V14.4482V14.4482V14.4482V14.4481V14.4481V14.4481V14.4481V14.4481V14.448V14.448V14.448V14.448V14.448V14.4479V14.4479V14.4479V14.4479V14.4479V14.4478V14.4478V14.4478V14.4478V14.4478V14.4477V14.4477V14.4477V14.4477V14.4476V14.4476V14.4476V14.4476V14.4475V14.4475V14.4475V14.4475V14.4474V14.4474V14.4474V14.4474V14.4473V14.4473V14.4473V14.4473V14.4472V14.4472V14.4472V14.4472V14.4471V14.4471V14.4471V14.447V14.447V14.447V14.447V14.4469V14.4469V14.4469V14.4468V14.4468V14.4468V14.4467V14.4467V14.4467V14.4466V14.4466V14.4466V14.4465V14.4465V14.4465V14.4464V14.4464V14.4464V14.4463V14.4463V14.4463V14.4462V14.4462V14.4462V14.4461V14.4461V14.4461V14.446V14.446V14.4459V14.4459V14.4459V14.4458V14.4458V14.4458V14.4457V14.4457V14.4456V14.4456V14.4456V14.4455V14.4455V14.4454V14.4454V14.4453V14.4453V14.4453V14.4452V14.4452V14.4451V14.4451V14.445V14.445V14.445V14.4449V14.4449V14.4448V14.4448V14.4447V14.4447V14.4446V14.4446V14.4445V14.4445V14.4444V14.4444V14.4443V14.4443V14.4442V14.4442V14.4441V14.4441V14.444V14.444V14.4439V14.4439V14.4438V14.4438V14.4437V14.4437V14.4436V14.4436V14.4435V14.4435V14.4434V14.4433V14.4433V14.4432V14.4432V14.4431V14.4431V14.443V14.4429V14.4429V14.4428V14.4428V14.4427V14.4426V14.4426V14.4425V14.4425V14.4424V14.4423V14.4423V14.4422V14.4422V14.4421V14.442V14.442V14.4419V14.4418V14.4418V14.4417V14.4416V14.4416V14.4415V14.4414V14.4414V14.4413V14.4412V14.4412V14.4411V14.441V14.441V14.4409V14.4408V14.4407V14.4407V14.4406V14.4405V14.4405V14.4404V14.4403V14.4402V14.4402V14.4401V14.44V14.4399V14.4399V14.4398V14.4397V14.4396V14.4396V14.4395V14.4394V14.4393V14.4392V14.4392V14.4391V14.439V14.4389V14.4388V14.4388V14.4387V14.4386V14.4385V14.4384V14.4383V14.4383V14.4382V14.4381V14.438V14.4379V14.4378V14.4377V14.4377V14.4376V14.4375V14.4374V14.4373V14.4372V14.4371V14.437V14.4369V14.4368V14.4368V14.4367V14.4366V14.4365V14.4364V14.4363V14.4362V14.4361V14.436V14.4359V14.4358V14.4357V14.4356V14.4355V14.4354V14.4353V14.4352V14.4351V14.435V14.4349V14.4348V14.4347V14.4346V14.4345V14.4344V14.4343V14.4342V14.4341V14.434V14.4339V14.4338V14.4337V14.4336V14.4335V14.4334V14.4332V14.4331V14.433V14.4329V14.4328V14.4327V14.4326V14.4325V14.4324V14.4322V14.4321V14.432V14.4319V14.4318V14.4317V14.4316V14.4314V14.4313V14.4312V14.4311V14.431V14.4309V14.4307V14.4306V14.4305V14.4304V14.4302V14.4301V14.43V14.4299V14.4298V14.4296V14.4295V14.4294V14.4293V14.4291V14.429V14.4289V14.4287V14.4286V14.4285V14.4284V14.4282V14.4281V14.428V14.4278V14.4277V14.4276V14.4274V14.4273V14.4272V14.427V14.4269V14.4268V14.4266V14.4265V14.4264V14.4262V14.4261V14.4259V14.4258V14.4257V14.4255V14.4254V14.4252V14.4251V14.4249V14.4248V14.4247V14.4245V14.4244V14.4242V14.3843L12.4936 14.3449L11.8186 10.1449L11.8171 10.1355L11.8152 10.1262C11.8053 10.0765 11.8169 9.98236 11.9185 9.86237L14.8319 6.8743C14.8985 6.80652 14.9535 6.71511 14.9757 6.60392C14.9976 6.49451 14.9811 6.39933 14.9586 6.33173C14.9368 6.26621 14.9065 6.21765 14.8853 6.1879C14.874 6.17205 14.8631 6.15868 14.8538 6.14788C14.849 6.14241 14.8445 6.13743 14.8403 6.13293L14.8342 6.12649L14.8313 6.1235L14.8298 6.12207L14.8291 6.12136L14.8288 6.12102C14.8286 6.12084 14.8285 6.12067 14.4749 6.47422L14.8285 6.12067L14.713 6.0052L14.5516 5.98014L10.5392 5.35709C10.4216 5.3313 10.3623 5.27144 10.3391 5.21352L10.3319 5.19544L10.3233 5.17798L8.44829 1.37798ZM12.059 15.0499C11.9359 15.0709 11.8091 15.0488 11.6867 14.9838L8.23865 13.1099L7.9999 12.9801L7.76114 13.1099L4.31114 14.9849L4.29132 14.9957L4.27255 15.0082C4.26575 15.0127 4.24336 15.0247 4.19547 15.0346C4.14826 15.0444 4.09051 15.0492 4.0249 15.0492C4.01453 15.0492 4.00413 15.0489 3.99372 15.0483L4.28804 14.8889L7.88804 12.9389L7.88805 12.9389L7.89272 12.9363C7.95828 12.8999 8.05555 12.8882 8.17025 12.9435L11.7618 14.8889L12.059 15.0499Z" fill="currentColor" stroke="currentColor" />
@@ -610,7 +674,8 @@
 
 										<a href="#" data-accordion-target="#accordion-collapse-body-2" aria-expanded="true" aria-controls="accordion-collapse-body-2" class="flex items-center relative gap-2 rounded-lg">
 											<p class="text-base font-medium text-left text-blue-600">
-												Expand details
+												<span>Expand details</span>
+												<span>Hide details</span>
 											</p>
 											<svg data-accordion-icon width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 relative rotate-180" preserveAspectRatio="xMidYMid meet">
 												<path d="M7.99992 3.33398V12.6673M7.99992 12.6673L12.6666 8.00065M7.99992 12.6673L3.33325 8.00065" stroke="#2563EB" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -715,10 +780,49 @@
 						</div>
 					</div>
 
+					<nav class="flex items-center justify-center mt-10" aria-label="Page navigation example">
+						<ul class="inline-flex -space-x-px text-sm gap-2">
+							<li>
+								<a href="#" class="flex items-center justify-center overflow-hidden gap-2.5 p-2 w-9 h-9 rounded-md border border-slate-200 text-base text-center text-slate-900 transition-colors hover:bg-blue-500 hover:border-blue-500 hover:text-white dark:text-white dark:border-transparent">
+
+
+									<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[18px] h-[18px] relative" preserveAspectRatio="xMidYMid meet">
+										<path d="M12.6782 16.1148C12.5095 16.1148 12.3407 16.0586 12.2282 15.918L5.87197 9.44922C5.61885 9.19609 5.61885 8.80234 5.87197 8.54922L12.2282 2.08047C12.4813 1.82734 12.8751 1.82734 13.1282 2.08047C13.3813 2.33359 13.3813 2.72734 13.1282 2.98047L7.22197 8.99922L13.1563 15.018C13.4095 15.2711 13.4095 15.6648 13.1563 15.918C12.9876 16.0305 12.847 16.1148 12.6782 16.1148Z" fill="currentColor"></path>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center justify-center overflow-hidden gap-2.5 p-2 w-9 h-9 rounded-md bg-blue-600 text-base text-center text-white transition-colors hover:bg-blue-500 hover:border-blue-500 hover:text-white dark:text-white dark:border-transparent">1</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center justify-center overflow-hidden gap-2.5 p-2 w-9 h-9 rounded-md border border-slate-200 text-base text-center text-slate-900 transition-colors hover:bg-blue-500 hover:border-blue-500 hover:text-white dark:text-white dark:border-transparent">2</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center justify-center overflow-hidden gap-2.5 p-2 w-9 h-9 rounded-md border border-slate-200 text-base text-center text-slate-900 transition-colors hover:bg-blue-500 hover:border-blue-500 hover:text-white dark:text-white dark:border-transparent">3</a>
+							</li>
+							</li>
+							<li>
+								<a href="#" class="flex items-center justify-center overflow-hidden gap-2.5 p-2 w-9 h-9 rounded-md border border-slate-200 text-base text-center text-slate-900 transition-colors hover:bg-blue-500 hover:border-blue-500 hover:text-white dark:text-white dark:border-transparent">4</a>
+							</li>
+							<li>
+								<a href="#" class="flex items-center justify-center overflow-hidden gap-2.5 p-2 w-9 h-9 rounded-md border border-slate-200 text-base text-center text-slate-900 transition-colors hover:bg-blue-500 hover:border-blue-500 hover:text-white dark:text-white dark:border-transparent">
+
+									<svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+										<path d="M1.32185 15.1148C1.1531 15.1148 1.01248 15.0586 0.871851 14.9461C0.618726 14.693 0.618726 14.2992 0.871851 14.0461L6.7781 7.99922L0.871851 1.98047C0.618726 1.72734 0.618726 1.33359 0.871851 1.08047C1.12498 0.827344 1.51873 0.827344 1.77185 1.08047L8.1281 7.54922C8.38123 7.80234 8.38123 8.19609 8.1281 8.44922L1.77185 14.918C1.65935 15.0305 1.4906 15.1148 1.32185 15.1148Z" fill="currentColor"></path>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</nav>
+
 
 				</div>
 			</div>
-
+			<button id="toggle-filter" type="button" class="flex justify-center items-center w-11 h-11 gap-2 px-4 py-2 rounded-lg bg-blue-600 border border-blue-600 fixed right-5 bottom-20 lg:hidden">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="xMidYMid meet">
+					<path d="M14.6666 2H1.33325L6.66658 8.30667V12.6667L9.33325 14V8.30667L14.6666 2Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+				</svg>
+			</button>
 
 
 		</main>
@@ -726,8 +830,58 @@
 			<div class="footer__container">
 			</div>
 		</footer>
+
+		<!-- Main modal -->
+		<div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+			<div class="relative p-4 w-full max-w-[37.5rem] max-h-full">
+				<!-- Modal content -->
+				<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+					<!-- Modal header -->
+					<div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+						<div class="flex flex-col gap-3">
+							<h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
+								Headline
+							</h3>
+							<p class="text-base text-center text-slate-500">Description
+							</p>
+						</div>
+						<button type="button" class="applyBtn  text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+							</svg>
+							<span class="sr-only">Close modal</span>
+						</button>
+					</div>
+					<!-- Modal body -->
+					<div class="modal-container-date p-4 md:p-5 space-y-4 sm:block flex items-center flex-col justify-center">
+
+					</div>
+					<!-- Modal footer -->
+					<div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+						<div class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 gap-1 py-4">
+							<div class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[268px] relative gap-2">
+								<div class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 w-[21px] h-[21px] gap-2.5 rounded-md bg-red-100"></div>
+								<p class="text-base text-left text-[#020617] dark:text-white">- description</p>
+								<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-[22px] h-[22px] relative" preserveAspectRatio="none">
+									<path d="M9.05575 6.89242C10.1292 5.95283 11.8708 5.95283 12.9443 6.89242C14.0186 7.832 14.0186 9.3555 12.9443 10.2951C12.7582 10.4592 12.5501 10.5939 12.3301 10.7003C11.6472 11.0312 11.0009 11.616 11.0009 12.375V13.0625M19.25 11C19.25 12.0834 19.0366 13.1562 18.622 14.1571C18.2074 15.1581 17.5997 16.0675 16.8336 16.8336C16.0675 17.5997 15.1581 18.2074 14.1571 18.622C13.1562 19.0366 12.0834 19.25 11 19.25C9.91659 19.25 8.8438 19.0366 7.84286 18.622C6.84193 18.2074 5.93245 17.5997 5.16637 16.8336C4.40029 16.0675 3.7926 15.1581 3.37799 14.1571C2.96339 13.1562 2.75 12.0834 2.75 11C2.75 8.81196 3.61919 6.71354 5.16637 5.16637C6.71354 3.61919 8.81196 2.75 11 2.75C13.188 2.75 15.2865 3.61919 16.8336 5.16637C18.3808 6.71354 19.25 8.81196 19.25 11ZM11 15.8125H11.0073V15.8198H11V15.8125Z" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
+							<div class="flex justify-start items-center flex-grow-0 flex-shrink-0 w-[268px] relative gap-2">
+								<div class="flex flex-col justify-center items-center flex-grow-0 flex-shrink-0 w-[21px] h-[21px] gap-2.5 rounded-md bg-[#dcf1e4]"></div>
+								<p class="text-base text-left text-[#020617] dark:text-white">- description</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20241108153707"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241111171039"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241111171039"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241111171039"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241111171039" />
+
+	<script src="js/app.min.js?_v=20241111171039"></script>
 </body>
 
 </html>
