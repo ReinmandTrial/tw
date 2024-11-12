@@ -2136,8 +2136,7 @@ input:checked + .toggle-bg {
   display: none!important
 }
 .modal-container-date .daterangepicker .in-range.available:not(.prev,.next) {
-  border-radius: 0;
-  background-color: rgb(26 86 219 / .5);
+  background-color: rgb(26 86 219 / .7);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
