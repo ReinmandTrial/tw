@@ -2051,8 +2051,9 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity))
 }
 .modal-container-date .daterangepicker .available:not(.prev,.next) {
-  margin: .25rem;
+  border-radius: 13px 12px 10px 12px!important;
   height: 34px;
+  max-height: 34px;
   width: 34px;
   gap: .625rem;
   border-radius: .75rem;
@@ -2061,7 +2062,6 @@ input:checked + .toggle-bg {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
   background-color: rgb(22 163 74 / .15);
-  padding: .25rem;
   text-align: center;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -2077,6 +2077,7 @@ input:checked + .toggle-bg {
 }
 .modal-container-date .daterangepicker .disabled {
   height: 34px;
+  max-height: 34px;
   width: 34px;
   gap: .625rem;
   border-radius: .75rem;
@@ -2112,18 +2113,12 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 .modal-container-date .daterangepicker .start-date.available:not(.prev,.next) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
-.modal-container-date .daterangepicker .end-date.in-range.available:not(.prev,.next) {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-right-radius: .75rem;
-  border-bottom-right-radius: .75rem;
+.modal-container-date .daterangepicker tr .end-date.in-range.available:not(.prev,.next) {
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -2136,7 +2131,7 @@ input:checked + .toggle-bg {
   display: none!important
 }
 .modal-container-date .daterangepicker .in-range.available:not(.prev,.next) {
-  background-color: rgb(26 86 219 / .7);
+  background-color: rgb(26 86 219 / .6);
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
