@@ -2096,14 +2096,16 @@ input:checked + .toggle-bg {
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
   background-color: rgb(239 68 68 / .4)
 }
-.modal-container-date .daterangepicker .today.available:not(.prev,.next) {
+.modal-container-date .daterangepicker .today.active.available:not(.prev,.next) {
+  border-radius: .75rem;
   --tw-bg-opacity: 1;
   background-color: rgb(28 100 242 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
-.modal-container-date .daterangepicker .end-date.in-range.available:not(.prev,.next),
-.modal-container-date .daterangepicker .start-date.available:not(.prev,.next) {
+.modal-container-date .daterangepicker .end-date.in-range.available:not(.prev,.next)::before,
+.modal-container-date .daterangepicker .start-date.available:not(.prev,.next)::before {
+  content: "";
   --tw-bg-opacity: 1;
   background-color: rgb(26 86 219 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -2111,13 +2113,21 @@ input:checked + .toggle-bg {
 }
 .modal-container-date .daterangepicker .start-date.available:not(.prev,.next) {
   border-top-right-radius: 0;
-  border-bottom-right-radius: 0
+  border-bottom-right-radius: 0;
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 .modal-container-date .daterangepicker .end-date.in-range.available:not(.prev,.next) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: .75rem;
-  border-bottom-right-radius: .75rem
+  border-bottom-right-radius: .75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 .modal-container-date .daterangepicker::after {
   display: none!important
