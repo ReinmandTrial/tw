@@ -1912,11 +1912,18 @@ input:checked + .toggle-bg {
 }
 .modal-container-date .daterangepicker {
   position: static!important;
-  display: block!important;
+  display: grid!important;
   background-color: rgba(0,0,0,0);
   border: none;
   max-width: 100%;
   width: 100%
+}
+.modal-container-date .daterangepicker table {
+  border-spacing: .1875rem!important;
+  border-collapse: separate!important
+}
+.modal-container-date .daterangepicker .ranges {
+  display: none
 }
 .modal-container-date .daterangepicker .calendar-table {
   background-color: rgba(0,0,0,0);
@@ -2051,16 +2058,11 @@ input:checked + .toggle-bg {
   --tw-ring-color: rgb(55 65 81 / var(--tw-ring-opacity))
 }
 .modal-container-date .daterangepicker .available:not(.prev,.next) {
-  border-radius: 13px 12px 10px 12px!important;
   height: 34px;
   max-height: 34px;
   width: 34px;
   gap: .625rem;
   border-radius: .75rem;
-  border-width: 3px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   background-color: rgb(22 163 74 / .15);
   text-align: center;
   font-size: 1rem;
@@ -2081,10 +2083,6 @@ input:checked + .toggle-bg {
   width: 34px;
   gap: .625rem;
   border-radius: .75rem;
-  border-width: 3px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
   background-color: rgb(239 68 68 / .15);
   text-align: center;
   font-size: 1rem;
@@ -2548,6 +2546,12 @@ input:checked + .toggle-bg {
   .container {
     max-width: 640px
   }
+  .modal-container-date .daterangepicker {
+    grid-template-columns: 1fr 1fr
+  }
+  .modal-container-date .daterangepicker.show-calendar .drp-buttons {
+    grid-column: span 2/span 2
+  }
   .modal-container-date .daterangepicker.show-calendar .drp-buttons .drp-selected {
     flex: 1 1 auto
   }
@@ -2654,6 +2658,11 @@ input:checked + .toggle-bg {
 @media (min-width:1536px) {
   .container {
     max-width: 1536px
+  }
+}
+@media (max-width:640px) {
+  .modal-container-date .daterangepicker {
+    grid-template-columns: 1fr
   }
 }
 @media (max-width:47.99875em) {
