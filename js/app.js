@@ -1,14 +1,5 @@
 (() => {
     "use strict";
-    let addWindowScrollEvent = false;
-    setTimeout((() => {
-        if (addWindowScrollEvent) {
-            let windowScroll = new Event("windowScroll");
-            window.addEventListener("scroll", (function(e) {
-                document.dispatchEvent(windowScroll);
-            }));
-        }
-    }), 0);
     var Events = function() {
         function Events(eventType, eventFunctions) {
             if (eventFunctions === void 0) eventFunctions = [];
