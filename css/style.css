@@ -1459,9 +1459,6 @@ input:checked + .toggle-bg {
   border-top-width: 1px;
   border-bottom-width: 1px
 }
-.border-b {
-  border-bottom-width: 1px
-}
 .border-t {
   border-top-width: 1px
 }
@@ -2719,12 +2716,11 @@ input:checked + .toggle-bg {
     padding-left: .5rem;
     padding-right: .5rem
   }
-  .md\:py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem
-  }
   .md\:pb-0 {
     padding-bottom: 0
+  }
+  .md\:pb-5 {
+    padding-bottom: 1.25rem
   }
   .md\:pl-\[20rem\] {
     padding-left: 20rem
