@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241112132313">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241114180142">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +68,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="#" class="flex flex-col items-center gap-1">
+						<a href="#" class="flex flex-col items-center gap-1" data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar">
 							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class=" w-6 h-6 relative" preserveAspectRatio="xMidYMid meet">
 								<path d="M12.0999 13.625C12.9973 13.625 13.7249 12.8975 13.7249 12C13.7249 11.1025 12.9973 10.375 12.0999 10.375C11.2024 10.375 10.4749 11.1025 10.4749 12C10.4749 12.8975 11.2024 13.625 12.0999 13.625Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
 								<path d="M20.0999 13.625C20.9973 13.625 21.7249 12.8975 21.7249 12C21.7249 11.1025 20.9973 10.375 20.0999 10.375C19.2024 10.375 18.4749 11.1025 18.4749 12C18.4749 12.8975 19.2024 13.625 20.0999 13.625Z" fill="#475569" stroke="#475569" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -628,13 +628,14 @@
 							</div>
 
 							<div class="flex  mt-5 justify-center items-center">
-								<div class="flex gap-3 justify-center items-center">
+								<div class="flex gap-3 justify-center items-center flex-col">
 									<button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex-1">Call To Action</button>
+									<button type="button" class="flex items-center gap-2 py-2.5 px-4 min-w-10 h-10 text-sm font-medium focus:outline-none rounded-lg bg-slate-100/50 border border-slate-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white dark:bg-slate-800/50 dark:border-slate-800">Call To Action</button>
 								</div>
 							</div>
 						</div>
 
-						<div class="flex flex-col items-start self-start sticky top-5 relative gap-4 px-5 py-8 rounded-lg bg-white border border-slate-200">
+						<div class="md:flex hidden flex-col items-start self-start sticky top-5 relative gap-4 px-5 py-8 rounded-lg bg-white border border-slate-200">
 							<p class="text-2xl font-semibold text-left text-slate-900">
 								Heading
 							</p>
@@ -648,8 +649,8 @@
 											</svg>
 										</div>
 									</div>
-									<div class="flex flex-col justify-center items-start relative gap-1">
-										<p class="self-stretch text-sm text-left text-slate-500">
+									<div class="flex flex-col justify-center items-start relative">
+										<p class="self-stretch text-sm text-left text-slate-500 mb-1">
 											Step 1
 										</p>
 										<p class="text-xl font-semibold text-left text-slate-900">
@@ -669,8 +670,8 @@
 											</svg>
 										</div>
 									</div>
-									<div class="flex flex-col justify-center items-start relative gap-1">
-										<p class="self-stretch text-sm text-left text-slate-500">
+									<div class="flex flex-col justify-center items-start relative">
+										<p class="self-stretch text-sm text-left text-slate-500 mb-1">
 											Step 1
 										</p>
 										<p class="text-xl font-semibold text-left text-slate-900">
@@ -690,8 +691,8 @@
 											</svg>
 										</div>
 									</div>
-									<div class="flex flex-col justify-center items-start relative gap-1">
-										<p class="self-stretch text-sm text-left text-slate-500">
+									<div class="flex flex-col justify-center items-start relative">
+										<p class="self-stretch text-sm text-left text-slate-500 mb-1">
 											Step 1
 										</p>
 										<p class="text-xl font-semibold text-left text-slate-900">
@@ -711,8 +712,8 @@
 											</svg>
 										</div>
 									</div>
-									<div class="flex flex-col justify-center items-start relative gap-1">
-										<p class="self-stretch text-sm text-left text-slate-500">
+									<div class="flex flex-col justify-center items-start relative">
+										<p class="self-stretch text-sm text-left text-slate-500 mb-1">
 											Step 1
 										</p>
 										<p class="text-xl font-semibold text-left text-slate-900">
@@ -731,21 +732,17 @@
 
 				</div>
 			</div>
-			<button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" type="button" class="flex justify-center items-center w-11 h-11 gap-2 px-4 py-2 rounded-lg bg-blue-600 border border-blue-600 fixed right-5 bottom-20 lg:hidden">
-				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class=" w-4 h-4 relative" preserveAspectRatio="xMidYMid meet">
-					<path d="M14.6666 2H1.33325L6.66658 8.30667V12.6667L9.33325 14V8.30667L14.6666 2Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-				</svg>
-			</button>
+
 
 
 		</main>
 	</div>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241112132313"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241112132313"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241112132313"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241112132313" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241114180142"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241114180142"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241114180142"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241114180142" />
 
-	<script src="js/app.min.js?_v=20241112132313"></script>
+	<script src="js/app.min.js?_v=20241114180142"></script>
 </body>
 
 </html>
