@@ -2209,25 +2209,30 @@ input:checked + .toggle-bg {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity))
 }
-.page-content [aria-expanded=true] {
+.page-content .accordion-item.show {
   background-color: rgba(0,0,0,0)!important
 }
-.page-content [aria-expanded=true] span:last-child {
+.page-content .accordion-item.show [data-accordion-icon] {
+  --tw-rotate: 0deg;
+  -webkit-transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
+}
+.page-content .accordion-item.show span:last-child {
   display: block
 }
-.page-content [aria-expanded=true] span:first-child {
+.page-content .accordion-item.show span:first-child {
   display: none
 }
-.page-content [aria-expanded=true] .desc {
+.page-content .accordion-item.show .desc {
   -webkit-line-clamp: initial!important
 }
 .daterangepicker .drp-calendar {
   max-width: 100%!important
 }
-.page-content [aria-expanded=false] span:last-child {
+.page-content .accordion-item span:last-child {
   display: none
 }
-.page-content [aria-expanded=false] span:first-child {
+.page-content .accordion-item span:first-child {
   display: block
 }
 .custom-overlay {

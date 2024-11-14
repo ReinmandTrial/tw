@@ -5740,6 +5740,30 @@
     if (typeof window !== "undefined") window.initFlowbite = initFlowbite;
     var esm_events = new events("load", [ initAccordions, initCollapses, initCarousels, initDismisses, initDropdowns, initModals, initDrawers, initTabs, initTooltips, initPopovers, initDials, initInputCounters, initCopyClipboards, initDatepickers ]);
     esm_events.init();
+    document.querySelectorAll(".accordion").forEach((accordion => {
+        accordion.querySelectorAll(".accordion-item").forEach(((item, index) => {
+            const targetButton = item.querySelector("[data-accordion-target]");
+            const body = item.querySelector("[data-accordion-body]");
+            targetButton.addEventListener("click", (e => {
+                e.preventDefault();
+                const isOpen = !body.classList.contains("hidden");
+                accordion.querySelectorAll(".accordion-item").forEach(((otherItem, otherIndex) => {
+                    const otherBody = otherItem.querySelector("[data-accordion-body]");
+                    if (otherIndex !== index) {
+                        otherItem.classList.remove("show");
+                        otherBody.classList.add("hidden");
+                    }
+                }));
+                if (!isOpen) {
+                    item.classList.add("show");
+                    body.classList.remove("hidden");
+                } else {
+                    item.classList.remove("show");
+                    body.classList.add("hidden");
+                }
+            }));
+        }));
+    }));
     if (localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.classList.add("dark"); else document.documentElement.classList.remove("dark");
     var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
     var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
