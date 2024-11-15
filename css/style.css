@@ -2118,7 +2118,21 @@ input:checked + .toggle-bg {
   color: rgb(255 255 255 / var(--tw-text-opacity))
 }
 .modal-container-date .daterangepicker .off.ends {
-  display: none!important
+  height: 34px;
+  max-height: 34px;
+  width: 34px;
+  gap: .625rem;
+  border-radius: .375rem;
+  background-color: rgb(209 213 219 / .25);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(15 23 42 / .35);
+  opacity: 1
+}
+.modal-container-date .daterangepicker .off.ends:is(.dark *) {
+  background-color: rgb(55 65 81 / .25);
+  color: rgb(248 250 252 / .35)
 }
 .modal-container-date .daterangepicker .calendar-table .next span {
   margin-left: -4px
