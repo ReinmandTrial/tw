@@ -889,6 +889,9 @@ input:checked + .toggle-bg {
 .left-0 {
   left: 0
 }
+.left-3 {
+  left: .75rem
+}
 .right-0 {
   right: 0
 }
@@ -1604,6 +1607,10 @@ input:checked + .toggle-bg {
 }
 .p-\[11px\] {
   padding: 11px
+}
+.px-1 {
+  padding-left: .25rem;
+  padding-right: .25rem
 }
 .px-2 {
   padding-left: .5rem;
@@ -2414,11 +2421,19 @@ input:checked + .toggle-bg {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 231 / var(--tw-bg-opacity))
 }
+.peer:checked ~ .peer-checked\:border-blue-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(28 100 242 / var(--tw-border-opacity))
+}
 .peer:checked ~ .peer-checked\:\!font-semibold {
   font-weight: 600!important
 }
 .peer:checked ~ .peer-checked\:font-semibold {
   font-weight: 600
+}
+.peer:checked ~ .peer-checked\:\!text-blue-600 {
+  --tw-text-opacity: 1!important;
+  color: rgb(28 100 242 / var(--tw-text-opacity))!important
 }
 .dark\:divide-gray-600:is(.dark *) > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
@@ -2753,9 +2768,17 @@ input:checked + .toggle-bg {
   .md\:p-7 {
     padding: 1.75rem
   }
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem
+  }
   .md\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem
+  }
+  .md\:py-2 {
+    padding-top: .5rem;
+    padding-bottom: .5rem
   }
   .md\:pb-0 {
     padding-bottom: 0

@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241115160037">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241115232759">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -347,7 +347,7 @@
 								</div>
 
 								<div class="flex flex-col">
-									<div class="mb-3">
+									<div class="mb-1">
 										<h4 class="text-lg font-semibold text-left text-slate-900">
 											Headline <span class="text-red-500">*</span>
 										</h4>
@@ -389,7 +389,7 @@
 								</div>
 								<div class="flex gap-4 sm:flex-row flex-col">
 									<div class="flex flex-col flex-1">
-										<div class="mb-3">
+										<div class="mb-1">
 											<h4 class="text-lg font-semibold text-left text-slate-900">
 												Headline <span class="text-red-500">*</span>
 											</h4>
@@ -397,7 +397,7 @@
 										<input type="text" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50/50:bg-slate-700/50:border-slate-700/50 placeholder:text-slate-900:text-slate-50" placeholder="1000" required=""></input>
 									</div>
 									<div class="flex flex-col flex-1">
-										<div class="mb-3">
+										<div class="mb-1">
 											<h4 class="text-lg font-semibold text-left text-slate-900">
 												Headline <span class="text-red-500">*</span>
 											</h4>
@@ -415,7 +415,7 @@
 								</div>
 
 								<div class="flex flex-col">
-									<div class="mb-3">
+									<div class="mb-1">
 										<h4 class="text-lg font-semibold text-left text-slate-900">
 											Headline <span class="text-red-500">*</span>
 										</h4>
@@ -455,48 +455,50 @@
 									<p class="text-base text-left text-slate-500">Description</p>
 								</div>
 								<div class="grid sm:grid-cols-2 sm:gap-8 gap-3 mb-5">
+									<div class="relative">
+										<input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="peer w-4 h-4 absolute top-3 left-3 self-start text-blue-600 bg-slate-100/50 border border-slate-500 rounded-full checked:!bg-blue-600 checked:!border-blue-600 focus:ring-blue-500:ring-blue-600 focus:ring-2 appearance-none">
+										<label for="bordered-radio-1" class="flex items-center p-3 rounded-md bg-white border border-slate-200 flex-col peer-checked:border-blue-600">
+											<div class="w-full flex flex-col items-center gap-1 py-2 text-base font-medium text-center text-slate-900">
+												<div class="flex justify-center items-start w-6 relative gap-2.5">
+													<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow h-6 relative peer-checked:!text-blue-600" preserveAspectRatio="none">
+														<path d="M19.5 3H5.5C4.39543 3 3.5 3.89543 3.5 5V19C3.5 20.1046 4.39543 21 5.5 21H19.5C20.6046 21 21.5 20.1046 21.5 19V5C21.5 3.89543 20.6046 3 19.5 3Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M9.5 17C11.5 17 12.3 16 12.3 14.2V9.99999C12.3 7.99999 13.3 6.69999 15.5 6.99999" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M9.5 11.1992H15.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</div>
 
-									<div class="flex items-center p-3 rounded-md bg-white border border-slate-200 flex-col">
-										<input id="bordered-radio-1" type="radio" value="" name="bordered-radio" class="w-4 h-4 self-start text-blue-600 bg-slate-100/50 border border-slate-500 rounded-full checked:!bg-blue-600 checked:!border-blue-600 focus:ring-blue-500:ring-blue-600 focus:ring-2 appearance-none">
-										<label for="bordered-radio-1" class="w-full flex flex-col  items-center gap-1 py-2 text-base font-medium text-center text-slate-900">
-
-
-
-											<div class="flex justify-center items-start  w-6 relative gap-2.5">
-												<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow h-6 relative" preserveAspectRatio="none">
-													<path d="M19.5 3H5.5C4.39543 3 3.5 3.89543 3.5 5V19C3.5 20.1046 4.39543 21 5.5 21H19.5C20.6046 21 21.5 20.1046 21.5 19V5C21.5 3.89543 20.6046 3 19.5 3Z" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M9.5 17C11.5 17 12.3 16 12.3 14.2V9.99999C12.3 7.99999 13.3 6.69999 15.5 6.99999" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M9.5 11.1992H15.2" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
+												<span>Label</span>
 											</div>
 
-											<span>Label</span>
 										</label>
 									</div>
-									<div class="flex items-center p-3 rounded-md bg-white border border-slate-200 flex-col">
-										<input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="w-4 h-4 self-start text-blue-600 bg-slate-100/50 border border-slate-500 rounded-full checked:!bg-blue-600 checked:!border-blue-600 focus:ring-blue-500:ring-blue-600 focus:ring-2 appearance-none">
-										<label for="bordered-radio-2" class="w-full flex flex-col  items-center gap-1 py-2 text-base font-medium text-center text-slate-900">
 
+									<div class="relative">
+										<input id="bordered-radio-2" type="radio" value="" name="bordered-radio" class="peer w-4 h-4 absolute top-3 left-3 self-start text-blue-600 bg-slate-100/50 border border-slate-500 rounded-full checked:!bg-blue-600 checked:!border-blue-600 focus:ring-blue-500:ring-blue-600 focus:ring-2 appearance-none">
+										<label for="bordered-radio-2" class="flex items-center p-3 rounded-md bg-white border border-slate-200 flex-col peer-checked:border-blue-600">
+											<div class="w-full flex flex-col items-center gap-1 py-2 text-base font-medium text-center text-slate-900">
+												<div class="flex justify-center items-start w-6 relative gap-2.5">
+													<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow h-6 relative peer-checked:!text-blue-600" preserveAspectRatio="none">
+														<path d="M19.5 3H5.5C4.39543 3 3.5 3.89543 3.5 5V19C3.5 20.1046 4.39543 21 5.5 21H19.5C20.6046 21 21.5 20.1046 21.5 19V5C21.5 3.89543 20.6046 3 19.5 3Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M9.5 17C11.5 17 12.3 16 12.3 14.2V9.99999C12.3 7.99999 13.3 6.69999 15.5 6.99999" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+														<path d="M9.5 11.1992H15.2" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+													</svg>
+												</div>
 
-
-											<div class="flex justify-center items-start  w-6 relative gap-2.5">
-												<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow h-6 relative" preserveAspectRatio="none">
-													<path d="M19.5 3H5.5C4.39543 3 3.5 3.89543 3.5 5V19C3.5 20.1046 4.39543 21 5.5 21H19.5C20.6046 21 21.5 20.1046 21.5 19V5C21.5 3.89543 20.6046 3 19.5 3Z" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M9.5 17C11.5 17 12.3 16 12.3 14.2V9.99999C12.3 7.99999 13.3 6.69999 15.5 6.99999" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-													<path d="M9.5 11.1992H15.2" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
-												</svg>
+												<span>Label</span>
 											</div>
 
-											<span>Label</span>
 										</label>
 									</div>
+
+
 
 								</div>
 
 
 
 								<div class="flex flex-col mb-5">
-									<div class="mb-3">
+									<div class="mb-1">
 										<h4 class="text-lg font-semibold text-left text-slate-900">
 											Headline <span class="text-red-500">*</span>
 										</h4>
@@ -532,7 +534,7 @@
 
 								<div class="flex gap-4 sm:flex-row flex-col">
 									<div class="flex flex-col flex-1">
-										<div class="mb-3">
+										<div class="mb-1">
 											<h4 class="text-lg font-semibold text-left text-slate-900">
 												Headline <span class="text-red-500">*</span>
 											</h4>
@@ -540,7 +542,7 @@
 										<input type="text" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50/50:bg-slate-700/50:border-slate-700/50 placeholder:text-slate-900:text-slate-50" placeholder="1000" required="">
 									</div>
 									<div class="flex flex-col flex-1">
-										<div class="mb-3">
+										<div class="mb-1">
 											<h4 class="text-lg font-semibold text-left text-slate-900">
 												Headline <span class="text-red-500">*</span>
 											</h4>
@@ -560,7 +562,7 @@
 								<div class="flex flex-col gap-5">
 									<div class="flex gap-4 sm:flex-row flex-col">
 										<div class="flex flex-col flex-1">
-											<div class="mb-3">
+											<div class="mb-1">
 												<h4 class="text-lg font-semibold text-left text-slate-900">
 													Headline <span class="text-red-500">*</span>
 												</h4>
@@ -568,7 +570,7 @@
 											<input type="text" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50/50:bg-slate-700/50:border-slate-700/50 placeholder:text-slate-900:text-slate-50" placeholder="1000" required="">
 										</div>
 										<div class="flex flex-col flex-1">
-											<div class="mb-3">
+											<div class="mb-1">
 												<h4 class="text-lg font-semibold text-left text-slate-900">
 													Headline <span class="text-red-500">*</span>
 												</h4>
@@ -609,7 +611,12 @@
 										<label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 p-8 rounded-xl bg-white border-slate-200 border-dashed cursor-pointer:bg-gray-800 hover:bg-gray-100:border-gray-500:bg-gray-600">
 											<div class="flex flex-col items-center justify-center pt-5 pb-6">
 												<div class="flex gap-2 mb-3">
-													<img src="img/file-check.webp" alt="Image">
+													<svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+														<path d="M24.667 3.33203H10.5003C9.61627 3.33203 8.76842 3.68322 8.1433 4.30834C7.51818 4.93346 7.16699 5.78131 7.16699 6.66536V33.332C7.16699 34.2161 7.51818 35.0639 8.1433 35.6891C8.76842 36.3142 9.61627 36.6654 10.5003 36.6654H30.5003C31.3844 36.6654 32.2322 36.3142 32.8573 35.6891C33.4825 35.0639 33.8337 34.2161 33.8337 33.332V12.4987L24.667 3.33203Z" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M23.833 3.33203V13.332H33.833" stroke="#64748B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+														<path d="M2.5 20C2.5 18.3431 3.84315 17 5.5 17H22.5C24.1569 17 25.5 18.3431 25.5 20V28C25.5 29.6569 24.1569 31 22.5 31H5.5C3.84315 31 2.5 29.6569 2.5 28V20Z" fill="#2563EB" />
+														<path d="M7.5767 27H5.60511V21.1818H7.61648C8.19413 21.1818 8.69034 21.2983 9.10511 21.5312C9.52178 21.7623 9.84186 22.0947 10.0653 22.5284C10.2888 22.9621 10.4006 23.4811 10.4006 24.0852C10.4006 24.6913 10.2879 25.2121 10.0625 25.6477C9.83902 26.0833 9.5161 26.4176 9.09375 26.6506C8.6733 26.8835 8.16761 27 7.5767 27ZM6.65909 26.0881H7.52557C7.93087 26.0881 8.26894 26.0142 8.53977 25.8665C8.81061 25.7169 9.0142 25.4943 9.15057 25.1989C9.28693 24.9015 9.35511 24.5303 9.35511 24.0852C9.35511 23.6402 9.28693 23.2708 9.15057 22.9773C9.0142 22.6818 8.8125 22.4612 8.54545 22.3153C8.2803 22.1676 7.95076 22.0938 7.55682 22.0938H6.65909V26.0881ZM16.6009 24.0909C16.6009 24.7178 16.4834 25.2547 16.2486 25.7017C16.0156 26.1468 15.6974 26.4877 15.294 26.7244C14.8925 26.9612 14.437 27.0795 13.9276 27.0795C13.4181 27.0795 12.9616 26.9612 12.5582 26.7244C12.1567 26.4858 11.8385 26.1439 11.6037 25.6989C11.3707 25.2519 11.2543 24.7159 11.2543 24.0909C11.2543 23.464 11.3707 22.928 11.6037 22.483C11.8385 22.036 12.1567 21.6941 12.5582 21.4574C12.9616 21.2206 13.4181 21.1023 13.9276 21.1023C14.437 21.1023 14.8925 21.2206 15.294 21.4574C15.6974 21.6941 16.0156 22.036 16.2486 22.483C16.4834 22.928 16.6009 23.464 16.6009 24.0909ZM15.5412 24.0909C15.5412 23.6496 15.4721 23.2775 15.3338 22.9744C15.1974 22.6695 15.008 22.4394 14.7656 22.2841C14.5232 22.1269 14.2438 22.0483 13.9276 22.0483C13.6113 22.0483 13.3319 22.1269 13.0895 22.2841C12.8471 22.4394 12.6567 22.6695 12.5185 22.9744C12.3821 23.2775 12.3139 23.6496 12.3139 24.0909C12.3139 24.5322 12.3821 24.9053 12.5185 25.2102C12.6567 25.5133 12.8471 25.7434 13.0895 25.9006C13.3319 26.0559 13.6113 26.1335 13.9276 26.1335C14.2438 26.1335 14.5232 26.0559 14.7656 25.9006C15.008 25.7434 15.1974 25.5133 15.3338 25.2102C15.4721 24.9053 15.5412 24.5322 15.5412 24.0909ZM22.5774 23.1449H21.5149C21.4846 22.9706 21.4287 22.8163 21.3473 22.6818C21.2659 22.5455 21.1645 22.4299 21.0433 22.3352C20.9221 22.2405 20.7839 22.1695 20.6286 22.1222C20.4751 22.0729 20.3094 22.0483 20.1314 22.0483C19.8151 22.0483 19.5348 22.1278 19.2905 22.2869C19.0462 22.4441 18.8549 22.6752 18.7166 22.9801C18.5784 23.2831 18.5092 23.6534 18.5092 24.0909C18.5092 24.536 18.5784 24.911 18.7166 25.2159C18.8568 25.5189 19.0481 25.7481 19.2905 25.9034C19.5348 26.0568 19.8142 26.1335 20.1286 26.1335C20.3028 26.1335 20.4657 26.1108 20.6172 26.0653C20.7706 26.018 20.9079 25.9489 21.0291 25.858C21.1522 25.767 21.2554 25.6553 21.3388 25.5227C21.424 25.3902 21.4827 25.2386 21.5149 25.0682L22.5774 25.0739C22.5376 25.3504 22.4515 25.6098 22.3189 25.8523C22.1882 26.0947 22.0168 26.3087 21.8047 26.4943C21.5926 26.678 21.3445 26.822 21.0604 26.9261C20.7763 27.0284 20.4609 27.0795 20.1143 27.0795C19.603 27.0795 19.1465 26.9612 18.745 26.7244C18.3435 26.4877 18.0272 26.1458 17.7962 25.6989C17.5651 25.2519 17.4496 24.7159 17.4496 24.0909C17.4496 23.464 17.5661 22.928 17.799 22.483C18.032 22.036 18.3492 21.6941 18.7507 21.4574C19.1522 21.2206 19.6068 21.1023 20.1143 21.1023C20.4382 21.1023 20.7393 21.1477 21.0178 21.2386C21.2962 21.3295 21.5443 21.4631 21.7621 21.6392C21.9799 21.8134 22.1589 22.0275 22.299 22.2812C22.4411 22.5331 22.5339 22.821 22.5774 23.1449Z" fill="white" />
+													</svg>
 												</div>
 												<p class="mb-1 text-lg font-semibold text-center text-slate-900">Headline</p>
 												<p class="text-base text-center text-[#525866]">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
@@ -737,12 +744,14 @@
 
 		</main>
 	</div>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241115160037"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241115160037"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241115160037"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241115160037" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241115232759"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241115232759"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js?_v=20241115232759"></script>
 
-	<script src="js/app.min.js?_v=20241115160037"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241115232759"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241115232759" />
+
+	<script src="js/app.min.js?_v=20241115232759"></script>
 </body>
 
 </html>

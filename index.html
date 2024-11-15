@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
 	<title>HomePage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241115160037">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241115232759">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -190,7 +190,7 @@
 			<aside id="sidebar" class="sidebar pl-10 py-4 pr-6 bg-white dark:bg-[#020617] lg:block hidden lg:relative fixed inset-0 z-[30] overflow-auto">
 				<div class="flex items-center gap-3 justify-between">
 					<p class="text-2xl font-semibold text-left text-slate-900 dark:text-slate-50 mb-3">Filter</p>
-					<button type="button" class="sidebar-close lg:hidden flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-slate-100/50 border border-slate-200 dark:text-white dark:bg-blue-600 dark:border-transparent">
+					<button type="button" class="sidebar-close lg:hidden flex justify-center items-center w-9 h-9 relative gap-2 md:px-4 px-1 py-1 md:py-2 rounded-lg bg-slate-100/50 border border-slate-200 dark:text-white dark:bg-blue-600 dark:border-transparent">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class=" w-4 h-4 relative" preserveAspectRatio="xMidYMid meet">
 							<path d="M12 4L4 12" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
 							<path d="M4 4L12 12" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -213,7 +213,7 @@
 							<div class="pt-2 pb-3">
 								<p class="text-base text-left text-slate-500 dark:text-slate-400 mb-5">Description</p>
 
-								<select id="countries" class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50 dark:bg-slate-800/50 dark:border-slate-800 dark:text-slate-50 dark:hover:bg-slate-700/50 dark:hover:border-slate-700/50">
+								<select id="countries" readonly class="text-base text-left w-full text-slate-900 p-3 outline-none rounded-md bg-slate-100/50 border border-slate-200 transition-colors hover:bg-slate-100 active:bg-slate-200/50 dark:bg-slate-800/50 dark:border-slate-800 dark:text-slate-50 dark:hover:bg-slate-700/50 dark:hover:border-slate-700/50">
 									<option selected>Choose a country</option>
 									<option value="US">United States</option>
 									<option value="CA">Canada</option>
@@ -803,7 +803,7 @@
 
 				</div>
 			</div>
-			<button id="toggle-filter" type="button" class="flex justify-center items-center w-11 h-11 gap-2 px-4 py-2 rounded-lg bg-blue-600 border border-blue-600 fixed right-5 bottom-20 lg:hidden">
+			<button id="toggle-filter" type="button" class="flex justify-center items-center w-11 h-11 gap-2 md:px-4 md:py-2 p-1 rounded-lg bg-blue-600 border border-blue-600 fixed right-5 bottom-20 lg:hidden">
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class=" w-4 h-4 relative" preserveAspectRatio="xMidYMid meet">
 					<path d="M14.6666 2H1.33325L6.66658 8.30667V12.6667L9.33325 14V8.30667L14.6666 2Z" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
 				</svg>
@@ -859,12 +859,14 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241115160037"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241115160037"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241115160037"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241115160037" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241115232759"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241115232759"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js?_v=20241115232759"></script>
 
-	<script src="js/app.min.js?_v=20241115160037"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241115232759"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241115232759" />
+
+	<script src="js/app.min.js?_v=20241115232759"></script>
 </body>
 
 </html>

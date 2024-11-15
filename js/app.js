@@ -5786,6 +5786,7 @@
             localStorage.setItem("color-theme", "dark");
         }
     }));
+    moment.locale("fr");
     const toggleButton = document.getElementById("toggle-filter");
     const sidebar = document.getElementById("sidebar");
     const closeButton = document.querySelector("#sidebar .sidebar-close");
@@ -5797,17 +5798,21 @@
             sidebar.classList.remove("!block");
         }));
     } else console.warn("Некоторые элементы не найдены на странице. Проверьте, что все ID и классы указаны верно.");
+    moment.locale("uk");
     const disabledDates = [ moment("2024-11-05"), moment("2024-11-10"), moment("2024-11-15") ];
     $("#datepicker").daterangepicker({
         parentEl: ".modal-container-date",
         startDate: moment(),
         opens: "center",
         locale: {
-            applyLabel: "Apply",
-            cancelLabel: "Cancel",
-            fromLabel: "From",
-            toLabel: "To",
-            customRangeLabel: "Select range",
+            format: "DD MMMM YYYY",
+            applyLabel: "Застосувати",
+            cancelLabel: "Скасувати",
+            fromLabel: "З",
+            toLabel: "По",
+            customRangeLabel: "Вибрати період",
+            daysOfWeek: moment.weekdaysShort(),
+            monthNames: moment.months(),
             previousMonth: "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' class='flex-grow-0 flex-shrink-0 w-4 h-4 relative' preserveAspectRatio='xMidYMid meet'><path d='M12.6667 8H3.33337' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path><path d='M8.00004 12.6673L3.33337 8.00065L8.00004 3.33398' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path></svg>",
             nextMonth: "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' class='flex-grow-0 flex-shrink-0 w-4 h-4 relative' preserveAspectRatio='xMidYMid meet'><path d='M3.33337 8H12.6667' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path><path d='M8 3.33398L12.6667 8.00065L8 12.6673' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path></svg>"
         },
@@ -5817,8 +5822,12 @@
             return date.isBefore(moment().subtract(2, "days"), "day");
         }
     }, (function(start, end, label) {
-        if (start.isSame(end)) $("#datepicker").val(start.format("YYYY-MM-DD")); else $("#datepicker").val(start.format("YYYY-MM-DD") + " - " + end.format("YYYY-MM-DD"));
-        console.log("New date range selected: " + start.format("YYYY-MM-DD") + " to " + end.format("YYYY-MM-DD") + " (predefined range: " + label + ")");
+        if (start.isSame(end)) $("#datepicker").val(start.format("DD MMMM YYYY")); else $("#datepicker").val(start.format("DD MMMM YYYY") + " - " + end.format("DD MMMM YYYY"));
+        console.log("New date range selected: " + start.format("DD MMMM YYYY") + " to " + end.format("DD MMMM YYYY") + " (selected range: " + label + ")");
+    }));
+    const buttons = document.querySelectorAll(".applyBtn, .cancelBtn");
+    if (buttons) buttons.forEach((button => {
+        button.setAttribute("data-modal-hide", "modal");
     }));
     window["FLS"] = true;
 })();
