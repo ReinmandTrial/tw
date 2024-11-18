@@ -5,6 +5,39 @@ import { flsModules } from "./modules.js";
 
 import 'flowbite';
 
+
+// JavaScript for Accordion
+document.querySelectorAll('.accordion').forEach((accordion) => {
+  accordion.querySelectorAll('.accordion-item').forEach((item, index) => {
+    const targetButton = item.querySelector('[data-accordion-target]');
+    const body = item.querySelector('[data-accordion-body]');
+
+    targetButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = !body.classList.contains('hidden');
+
+      // Закрытие всех других элементов аккордеона
+      accordion.querySelectorAll('.accordion-item').forEach((otherItem, otherIndex) => {
+        const otherBody = otherItem.querySelector('[data-accordion-body]');
+        if (otherIndex !== index) {
+          otherItem.classList.remove('show');
+          otherBody.classList.add('hidden');
+        }
+      });
+
+      // Переключение текущего элемента аккордеона
+      if (!isOpen) {
+        item.classList.add('show');
+        body.classList.remove('hidden');
+      } else {
+        item.classList.remove('show');
+        body.classList.add('hidden');
+      }
+    });
+  });
+});
+
+
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
   document.documentElement.classList.add('dark');
 } else {
@@ -52,6 +85,7 @@ themeToggleBtn.addEventListener('click', function() {
     
 });
 
+moment.locale('fr');
 
 // Находим элементы на странице
 const toggleButton = document.getElementById('toggle-filter');
@@ -75,6 +109,21 @@ if (toggleButton && sidebar && closeButton) {
   console.warn("Некоторые элементы не найдены на странице. Проверьте, что все ID и классы указаны верно.");
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Устанавливаем локализацию для moment.js
+moment.locale('uk');
+
 const disabledDates = [
   moment('2024-11-05'),
   moment('2024-11-10'),
@@ -83,38 +132,44 @@ const disabledDates = [
 
 $('#datepicker').daterangepicker({
   "parentEl": ".modal-container-date",
-  "startDate": moment(),  // Start date — today
-  // "minDate": moment().subtract(2, 'days'), // Minimum date — two days ago
-  "opens": "center", // Optionally position the calendar in the center
+  "startDate": moment(),
+  "opens": "center",
   "locale": {
-    "applyLabel": "Apply",
-    "cancelLabel": "Cancel",
-    "fromLabel": "From",
-    "toLabel": "To",
-    "customRangeLabel": "Select range",
-    "previousMonth": "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' class='flex-grow-0 flex-shrink-0 w-4 h-4 relative' preserveAspectRatio='xMidYMid meet'><path d='M12.6667 8H3.33337' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path><path d='M8.00004 12.6673L3.33337 8.00065L8.00004 3.33398' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path></svg>", // Custom prev icon
-    "nextMonth": "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' class='flex-grow-0 flex-shrink-0 w-4 h-4 relative' preserveAspectRatio='xMidYMid meet'><path d='M3.33337 8H12.6667' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path><path d='M8 3.33398L12.6667 8.00065L8 12.6673' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path></svg>"  // Custom next icon
+    "format": "DD MMMM YYYY",
+    "applyLabel": "Застосувати",
+    "cancelLabel": "Скасувати",
+    "fromLabel": "З",
+    "toLabel": "По",
+    "customRangeLabel": "Вибрати період",
+    "daysOfWeek": moment.weekdaysShort(),
+    "monthNames": moment.months(),
+    "previousMonth": "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' class='flex-grow-0 flex-shrink-0 w-4 h-4 relative' preserveAspectRatio='xMidYMid meet'><path d='M12.6667 8H3.33337' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path><path d='M8.00004 12.6673L3.33337 8.00065L8.00004 3.33398' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path></svg>",
+    "nextMonth": "<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg' class='flex-grow-0 flex-shrink-0 w-4 h-4 relative' preserveAspectRatio='xMidYMid meet'><path d='M3.33337 8H12.6667' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path><path d='M8 3.33398L12.6667 8.00065L8 12.6673' stroke='#020617' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'></path></svg>"
   },
-  "autoUpdateInput": false,  // Disable auto-updating the input field
+  // Устанавливаем autoUpdateInput в false, чтобы поле не обновлялось автоматически
+  "autoUpdateInput": false,
   "isInvalidDate": function(date) {
-    // Disable specific dates from the disabledDates array
     for (let i = 0; i < disabledDates.length; i++) {
       if (date.isSame(disabledDates[i], 'day')) {
-        return true;  // Disable this date
+        return true;
       }
     }
-    // Disable all dates before two days ago
     return date.isBefore(moment().subtract(2, 'days'), 'day');
   }
 }, function(start, end, label) {
-  // Update the input field with either one date or two dates
+  // Обновляем вручную, только когда пользователь выбрал диапазон
   if (start.isSame(end)) {
-    $('#datepicker').val(start.format('YYYY-MM-DD'));
+    $('#datepicker').val(start.format('DD MMMM YYYY'));
   } else {
-    $('#datepicker').val(start.format('YYYY-MM-DD') + ' - ' + end.format('YYYY-MM-DD'));
+    $('#datepicker').val(start.format('DD MMMM YYYY') + ' - ' + end.format('DD MMMM YYYY'));
   }
-
-  console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+  console.log('New date range selected: ' + start.format('DD MMMM YYYY') + ' to ' + end.format('DD MMMM YYYY') + ' (selected range: ' + label + ')');
 });
 
+const buttons = document.querySelectorAll('.applyBtn, .cancelBtn');
+if(buttons) {
+  buttons.forEach(button => {
+    button.setAttribute('data-modal-hide', 'modal');
+});
 
+}
