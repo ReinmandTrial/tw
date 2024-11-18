@@ -2265,6 +2265,10 @@ input:checked + .toggle-bg {
   inset: 0;
   background-color: #1e293BE5
 }
+.custom-radio:checked~label svg {
+  --tw-text-opacity: 1;
+  color: rgb(28 100 242 / var(--tw-text-opacity))
+}
 .placeholder\:text-slate-900::-webkit-input-placeholder {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity))
