@@ -173,3 +173,24 @@ if(buttons) {
 });
 
 }
+
+
+const secondarySidebarBtn = document.getElementById('sidebar-btn')
+const secondarySidebarBurgerBtn = document.getElementById('burger')
+const secondarySidebar = document.getElementById('sidebar')
+
+secondarySidebarBtn?.addEventListener('click', () => {
+  if (window.innerWidth >= 992) {
+    secondarySidebar?.classList.toggle('closed')
+  } else {
+    secondarySidebar?.classList.toggle('!left-0')
+  }
+})
+
+secondarySidebarBurgerBtn?.addEventListener('click', () => {
+  if (window.innerWidth >= 992) {
+    secondarySidebar?.classList.toggle('closed')
+  } else {
+    secondarySidebar?.classList.toggle('!left-0')
+  }
+})
