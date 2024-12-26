@@ -901,6 +901,9 @@ input:checked + .toggle-bg {
 .left-1\/2 {
   left: 50%
 }
+.left-\[17\.25rem\] {
+  left: 17.25rem
+}
 .right-0 {
   right: 0
 }
