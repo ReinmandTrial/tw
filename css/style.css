@@ -985,6 +985,9 @@ input:checked + .toggle-bg {
 .ml-auto {
   margin-left: auto
 }
+.mr-auto {
+  margin-right: auto
+}
 .ms-1 {
   -webkit-margin-start: .25rem;
   margin-inline-start: .25rem
@@ -1000,6 +1003,9 @@ input:checked + .toggle-bg {
 .ms-auto {
   -webkit-margin-start: auto;
   margin-inline-start: auto
+}
+.mt-1 {
+  margin-top: .25rem
 }
 .mt-1\.5 {
   margin-top: .375rem
@@ -1240,6 +1246,9 @@ input:checked + .toggle-bg {
 .flex-auto {
   flex: 1 1 auto
 }
+.flex-none {
+  flex: none
+}
 .flex-shrink {
   flex-shrink: 1
 }
@@ -1324,6 +1333,9 @@ input:checked + .toggle-bg {
 }
 .grid-cols-7 {
   grid-template-columns: repeat(7,minmax(0,1fr))
+}
+.grid-cols-\[1fr_1fr_1fr_1fr_1fr_1fr_1fr_6\.5rem\] {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 6.5rem
 }
 .grid-cols-\[1fr_1fr_1fr_1fr_1fr_6\.5rem\] {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 6.5rem
@@ -2980,6 +2992,9 @@ input:checked + .toggle-bg {
   }
   .lg\:hidden {
     display: none
+  }
+  .lg\:grid-cols-\[1fr_1fr_1fr_1fr_1fr_1fr_1fr_6\.5rem\] {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 6.5rem
   }
   .lg\:grid-cols-\[1fr_1fr_1fr_1fr_1fr_6\.5rem\] {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 6.5rem
