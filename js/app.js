@@ -5768,9 +5768,9 @@
     if (localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.classList.add("dark"); else document.documentElement.classList.remove("dark");
     var themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
     var themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
-    if (localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) themeToggleLightIcon.classList.remove("hidden"); else themeToggleDarkIcon.classList.remove("hidden");
+    if (localStorage.getItem("color-theme") === "dark" || !("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) themeToggleLightIcon.classList.remove("hidden"); else themeToggleDarkIcon?.classList?.remove("hidden");
     var themeToggleBtn = document.getElementById("theme-toggle");
-    themeToggleBtn.addEventListener("click", (function() {
+    themeToggleBtn?.addEventListener("click", (function() {
         themeToggleDarkIcon.classList.toggle("hidden");
         themeToggleLightIcon.classList.toggle("hidden");
         if (localStorage.getItem("color-theme")) if (localStorage.getItem("color-theme") === "light") {
@@ -5829,6 +5829,15 @@
     const buttons = document.querySelectorAll(".applyBtn, .cancelBtn");
     if (buttons) buttons.forEach((button => {
         button.setAttribute("data-modal-hide", "modal");
+    }));
+    const secondarySidebarBtn = document.getElementById("sidebar-btn");
+    const secondarySidebarBurgerBtn = document.getElementById("burger");
+    const secondarySidebar = document.getElementById("sidebar");
+    secondarySidebarBtn?.addEventListener("click", (() => {
+        if (window.innerWidth >= 992) secondarySidebar?.classList.toggle("closed"); else secondarySidebar?.classList.toggle("!left-0");
+    }));
+    secondarySidebarBurgerBtn?.addEventListener("click", (() => {
+        if (window.innerWidth >= 992) secondarySidebar?.classList.toggle("closed"); else secondarySidebar?.classList.toggle("!left-0");
     }));
     window["FLS"] = true;
 })();
