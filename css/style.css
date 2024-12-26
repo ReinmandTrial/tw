@@ -1325,8 +1325,8 @@ input:checked + .toggle-bg {
 .grid-cols-7 {
   grid-template-columns: repeat(7,minmax(0,1fr))
 }
-.grid-cols-\[1fr_1fr_1fr_1fr_1fr_6\.25rem\] {
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 6.25rem
+.grid-cols-\[1fr_1fr_1fr_1fr_1fr_6\.5rem\] {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 6.5rem
 }
 .flex-col {
   flex-direction: column
@@ -2973,8 +2973,8 @@ input:checked + .toggle-bg {
   .lg\:hidden {
     display: none
   }
-  .lg\:grid-cols-\[1fr_1fr_1fr_1fr_1fr_6\.25rem\] {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 6.25rem
+  .lg\:grid-cols-\[1fr_1fr_1fr_1fr_1fr_6\.5rem\] {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 6.5rem
   }
   .lg\:grid-cols-\[1fr_360px\] {
     grid-template-columns: 1fr 360px
