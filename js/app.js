@@ -4027,8 +4027,9 @@
         updateOnBlur: true,
         weekStart: 0
     };
-    var range = document.createRange();
+    var range = null;
     function parseHTML(html) {
+        if (range == null) range = document.createRange();
         return range.createContextualFragment(html);
     }
     function hideElement(el) {

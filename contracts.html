@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HomePage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241226173749">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="bg-slate-100 dark:bg-slate-800">
+	<div class="wrapper">
+
+		<div class="flex">
+			<div class="flex-auto px-2.5 pb-8 lg:px-8 lg:pb-12">
+				<div class="pt-4 pb-6 flex flex-col lg:flex-row lg:items-center gap-4 lg:justify-between">
+					<h1 class="text-2xl font-semibold text-slate-900 dark:text-slate-50">Контракти</h1>
+					<!-- dropdown start -->
+					<button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex items-center gap-1.5 px-4 pt-3 pb-2.5 rounded-lg bg-white border border-slate-200 dark:bg-[#020617] dark:border-slate-800 dark:text-slate-50 focus:!ring-0 focus:ring-blue-600" type="button">
+
+						<span class="text-sm font-medium text-slate-900 dark:text-slate-50 dark:text-slate-50">Cортувати за:</span>
+						<span class="text-sm text-slate-500 dark:text-slate-400 dark:text-slate-50">
+							Останні зміни</span>
+
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-5" preserveAspectRatio="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.22953 7.21048C5.37279 7.07265 5.56491 6.99734 5.76367 7.00109C5.96243 7.00484 6.15157 7.08735 6.28953 7.23048L9.99953 11.1685L13.7095 7.23048C13.777 7.15614 13.8586 7.09608 13.9497 7.05388C14.0408 7.01168 14.1394 6.98819 14.2397 6.9848C14.34 6.98141 14.44 6.99819 14.5337 7.03415C14.6274 7.07011 14.713 7.12451 14.7853 7.19413C14.8576 7.26376 14.9152 7.34719 14.9546 7.43947C14.9941 7.53176 15.0146 7.63103 15.015 7.73141C15.0154 7.83178 14.9957 7.93121 14.9569 8.02381C14.9182 8.11641 14.8613 8.20029 14.7895 8.27048L10.5395 12.7705C10.4696 12.8431 10.3857 12.9008 10.2929 12.9402C10.2001 12.9797 10.1003 13 9.99953 13C9.89871 13 9.79893 12.9797 9.70615 12.9402C9.61337 12.9008 9.52949 12.8431 9.45953 12.7705L5.20953 8.27048C5.0717 8.12722 4.99638 7.9351 5.00013 7.73634C5.00388 7.53758 5.08639 7.34844 5.22953 7.21048Z" fill="currentColor"></path>
+						</svg>
+					</button>
+
+					<div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+						<ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Останні
+									зміни</a>
+							</li>
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Останні
+									зміни</a>
+							</li>
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Останні
+									зміни</a>
+							</li>
+							<li>
+								<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Останні
+									зміни</a>
+							</li>
+						</ul>
+					</div>
+					<!-- dropdown end -->
+				</div>
+
+				<!-- table start -->
+				<div class="overflow-hidden rounded-lg bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800">
+					<!-- table head start -->
+					<div class="hidden lg:grid grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800">
+						<div class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400 flex gap-3 items-center">
+							<label class="flex items-center cursor-pointer relative">
+								<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+								<span class="absolute opacity-0 text-white peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+										<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</span>
+							</label>
+							Дані клієнта
+						</div>
+						<div class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Статус та останні зміни</div>
+						<div class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Тариф</div>
+						<div class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Очікувана дата укладання</div>
+						<div class="p-4 text-sm font-medium text-slate-500 dark:text-slate-400">Платник за Х</div>
+					</div>
+					<!-- table head end -->
+
+					<!-- table body start -->
+					<div>
+
+						<!-- table item start -->
+						<div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800 last:border-none bg-blue-600/[0.08] hover:bg-blue-600/[0.16]">
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Дані клієнта</dt>
+								<dd class="pt-5 pr-4 pb-5 pl-3 flex items-start gap-3">
+									<label class="flex items-center cursor-pointer relative">
+										<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+										<span class="absolute opacity-0 text-slate-500 dark:text-slate-400 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+												<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</span>
+									</label>
+
+									<div>
+										<a href="#" class="flex gap-2 items-center text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline mb-2">
+											<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0" preserveAspectRatio="xMidYMid meet">
+												<circle cx="4" cy="4" r="4" fill="#EF4444"></circle>
+											</svg>
+											<span class="line-clamp-1">Товариство з обмеженою
+												відповідальністю</span>
+										</a>
+										<div class="flex flex-col gap-1">
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												с. Затока
+											</p>
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												Одеська обл.
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Статус та останні зміни</dt>
+								<dd class="px-4 py-5">
+									<p class="block px-2 py-0.5 rounded-sm bg-blue-600/5 border border-blue-600/30 text-sm font-medium text-blue-600 w-fit mb-2">
+										В роботі
+									</p>
+									<div class="flex flex-col gap-1">
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											1 грудня, 11:08
+										</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											Клієнт: Надіслано підписаний договір про зміну тарифа
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Тариф</dt>
+								<dd class="px-4 py-5">
+									<a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline line-clamp-2 mb-2">
+										«Назва тарифу дві строки з детальним описом всередині»
+									</a>
+									<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+										Назва документа дві строки з детальним описом всередині.doc
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Очікувана дата укладання</dt>
+								<dd class="px-4 py-5">
+									<p class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-2">
+										5 грудня
+									</p>
+									<p class="text-xs text-slate-500 dark:text-slate-400">
+										Цього тижня
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Платник за Х</dt>
+								<dd class="px-4 py-5">
+									<p class="block px-2 py-0.5 rounded-sm bg-red-500/5 border border-red-500/30 text-sm font-medium text-red-500 w-fit mb-2">
+										Наша компанія
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden"></dt>
+								<dd class="px-3 py-5 flex gap-3">
+									<a href="#" class="flex justify-center items-center w-9 h-9 px-4 py-2 rounded-lg bg-blue-600 hover:bg-[#0b3ba4]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" fill="white"></path>
+										</svg>
+									</a>
+									<button class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB] hover:bg-blue-600/[0.16]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path d="M3 10C3 9.17157 3.67157 8.5 4.5 8.5C5.32843 8.5 6 9.17157 6 10C6 10.8284 5.32843 11.5 4.5 11.5C3.67157 11.5 3 10.8284 3 10Z" fill="currentColor"></path>
+											<path d="M8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10Z" fill="currentColor"></path>
+											<path d="M15.5 8.5C14.6716 8.5 14 9.17157 14 10C14 10.8284 14.6716 11.5 15.5 11.5C16.3284 11.5 17 10.8284 17 10C17 9.17157 16.3284 8.5 15.5 8.5Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<!-- table item end -->
+						<!-- table item start -->
+						<div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800 last:border-none hover:bg-blue-600/[0.16]">
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Дані клієнта</dt>
+								<dd class="pt-5 pr-4 pb-5 pl-3 flex items-start gap-3">
+									<label class="flex items-center cursor-pointer relative">
+										<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+										<span class="absolute opacity-0 text-slate-500 dark:text-slate-400 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+												<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</span>
+									</label>
+
+									<div>
+										<a href="#" class="flex gap-2 items-center text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline mb-2">
+											<span class="line-clamp-1">Товариство з обмеженою
+												відповідальністю</span>
+										</a>
+										<div class="flex flex-col gap-1">
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												с. Затока
+											</p>
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												Одеська обл.
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Статус та останні зміни</dt>
+								<dd class="px-4 py-5">
+									<p class="px-2 py-0.5 rounded-sm bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 text-sm font-medium text-slate-900 dark:text-slate-50 w-fit mb-2">
+										Новий
+									</p>
+									<div class="flex flex-col gap-1">
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											1 грудня, 11:08
+										</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											Клієнт: Надіслано підписаний договір про зміну тарифа
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Тариф</dt>
+								<dd class="px-4 py-5">
+									<a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline line-clamp-2 mb-2">
+										«Назва тарифу дві строки з детальним описом всередині»
+									</a>
+									<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+										Назва документа дві строки з детальним описом всередині.doc
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Очікувана дата укладання</dt>
+								<dd class="px-4 py-5">
+									<p class="text-sm font-semibold text-red-500 mb-2">
+										5 грудня
+									</p>
+									<p class="text-xs text-slate-500 dark:text-slate-400">
+										Цього тижня
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Платник за Х</dt>
+								<dd class="px-4 py-5">
+									<p class="px-2 py-0.5 rounded-sm bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 text-sm font-medium text-slate-900 dark:text-slate-50 w-fit mb-2">
+										Клієнт
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden"></dt>
+								<dd class="px-3 py-5 flex gap-3">
+									<a href="#" class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 hover:bg-blue-600/[0.16] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" fill="currentColor"></path>
+										</svg>
+									</a>
+									<button class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB] hover:bg-blue-600/[0.16]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path d="M3 10C3 9.17157 3.67157 8.5 4.5 8.5C5.32843 8.5 6 9.17157 6 10C6 10.8284 5.32843 11.5 4.5 11.5C3.67157 11.5 3 10.8284 3 10Z" fill="currentColor"></path>
+											<path d="M8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10Z" fill="currentColor"></path>
+											<path d="M15.5 8.5C14.6716 8.5 14 9.17157 14 10C14 10.8284 14.6716 11.5 15.5 11.5C16.3284 11.5 17 10.8284 17 10C17 9.17157 16.3284 8.5 15.5 8.5Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<!-- table item end -->
+						<!-- table item start -->
+						<div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800 last:border-none hover:bg-blue-600/[0.16]">
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Дані клієнта</dt>
+								<dd class="pt-5 pr-4 pb-5 pl-3 flex items-start gap-3">
+									<label class="flex items-center cursor-pointer relative">
+										<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+										<span class="absolute opacity-0 text-slate-500 dark:text-slate-400 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+												<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</span>
+									</label>
+
+									<div>
+										<a href="#" class="flex gap-2 items-center text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline mb-2">
+											<span class="line-clamp-1">Товариство з обмеженою
+												відповідальністю</span>
+										</a>
+										<div class="flex flex-col gap-1">
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												с. Затока
+											</p>
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												Одеська обл.
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Статус та останні зміни</dt>
+								<dd class="px-4 py-5">
+									<p class="px-2 py-0.5 rounded-sm bg-amber-500/5 border border-amber-500/30 text-sm font-medium text-amber-500 w-fit mb-2">
+										Orange
+									</p>
+
+									<div class="flex flex-col gap-1">
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											1 грудня, 11:08
+										</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											Клієнт: Надіслано підписаний договір про зміну тарифа
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Тариф</dt>
+								<dd class="px-4 py-5">
+									<a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline line-clamp-2 mb-2">
+										«Назва тарифу дві строки з детальним описом всередині»
+									</a>
+									<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+										Назва документа дві строки з детальним описом всередині.doc
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Очікувана дата укладання</dt>
+								<dd class="px-4 py-5">
+									<p class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-2">
+										5 грудня
+									</p>
+									<p class="text-xs text-slate-500 dark:text-slate-400">
+										Цього тижня
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Платник за Х</dt>
+								<dd class="px-4 py-5">
+									<p class="block px-2 py-0.5 rounded-sm bg-red-500/5 border border-red-500/30 text-sm font-medium text-red-500 w-fit mb-2">
+										Наша компанія
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden"></dt>
+								<dd class="px-3 py-5 flex gap-3">
+									<a href="#" class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 hover:bg-blue-600/[0.16] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" fill="currentColor"></path>
+										</svg>
+									</a>
+									<button class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB] hover:bg-blue-600/[0.16]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path d="M3 10C3 9.17157 3.67157 8.5 4.5 8.5C5.32843 8.5 6 9.17157 6 10C6 10.8284 5.32843 11.5 4.5 11.5C3.67157 11.5 3 10.8284 3 10Z" fill="currentColor"></path>
+											<path d="M8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10Z" fill="currentColor"></path>
+											<path d="M15.5 8.5C14.6716 8.5 14 9.17157 14 10C14 10.8284 14.6716 11.5 15.5 11.5C16.3284 11.5 17 10.8284 17 10C17 9.17157 16.3284 8.5 15.5 8.5Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<!-- table item end -->
+						<!-- table item start -->
+						<div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800 last:border-none hover:bg-blue-600/[0.16]">
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Дані клієнта</dt>
+								<dd class="pt-5 pr-4 pb-5 pl-3 flex items-start gap-3">
+									<label class="flex items-center cursor-pointer relative">
+										<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+										<span class="absolute opacity-0 text-slate-500 dark:text-slate-400 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+												<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</span>
+									</label>
+
+									<div>
+										<a href="#" class="flex gap-2 items-center text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline mb-2">
+											<span class="line-clamp-1">Товариство з обмеженою
+												відповідальністю</span>
+										</a>
+										<div class="flex flex-col gap-1">
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												с. Затока
+											</p>
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												Одеська обл.
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Статус та останні зміни</dt>
+								<dd class="px-4 py-5">
+									<p class="px-2 py-0.5 rounded-sm bg-green-600/5 border border-green-600/30 text-sm font-medium text-green-600 w-fit mb-2">
+										Green
+									</p>
+									<div class="flex flex-col gap-1">
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											1 грудня, 11:08
+										</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											Клієнт: Надіслано підписаний договір про зміну тарифа
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Тариф</dt>
+								<dd class="px-4 py-5">
+									<a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline line-clamp-2 mb-2">
+										«Назва тарифу дві строки з детальним описом всередині»
+									</a>
+									<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+										Назва документа дві строки з детальним описом всередині.doc
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Очікувана дата укладання</dt>
+								<dd class="px-4 py-5">
+									<p class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-2">
+										5 грудня
+									</p>
+									<p class="text-xs text-slate-500 dark:text-slate-400">
+										Цього тижня
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Платник за Х</dt>
+								<dd class="px-4 py-5">
+									<p class="block px-2 py-0.5 rounded-sm bg-red-500/5 border border-red-500/30 text-sm font-medium text-red-500 w-fit mb-2">
+										Наша компанія
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden"></dt>
+								<dd class="px-3 py-5 flex gap-3">
+									<a href="#" class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 hover:bg-blue-600/[0.16] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" fill="currentColor"></path>
+										</svg>
+									</a>
+									<button class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB] hover:bg-blue-600/[0.16]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path d="M3 10C3 9.17157 3.67157 8.5 4.5 8.5C5.32843 8.5 6 9.17157 6 10C6 10.8284 5.32843 11.5 4.5 11.5C3.67157 11.5 3 10.8284 3 10Z" fill="currentColor"></path>
+											<path d="M8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10Z" fill="currentColor"></path>
+											<path d="M15.5 8.5C14.6716 8.5 14 9.17157 14 10C14 10.8284 14.6716 11.5 15.5 11.5C16.3284 11.5 17 10.8284 17 10C17 9.17157 16.3284 8.5 15.5 8.5Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<!-- table item end -->
+						<!-- table item start -->
+						<div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800 last:border-none hover:bg-blue-600/[0.16]">
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Дані клієнта</dt>
+								<dd class="pt-5 pr-4 pb-5 pl-3 flex items-start gap-3">
+									<label class="flex items-center cursor-pointer relative">
+										<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+										<span class="absolute opacity-0 text-slate-500 dark:text-slate-400 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+												<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</span>
+									</label>
+
+									<div>
+										<a href="#" class="flex gap-2 items-center text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline mb-2">
+											<span class="line-clamp-1">Товариство з обмеженою
+												відповідальністю</span>
+										</a>
+										<div class="flex flex-col gap-1">
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												с. Затока
+											</p>
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												Одеська обл.
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Статус та останні зміни</dt>
+								<dd class="px-4 py-5">
+									<p class="px-2 py-0.5 rounded-sm bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 text-sm font-medium text-slate-500 dark:text-slate-400 w-fit mb-2">
+										Grey
+									</p>
+									<div class="flex flex-col gap-1">
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											1 грудня, 11:08
+										</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											Клієнт: Надіслано підписаний договір про зміну тарифа
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Тариф</dt>
+								<dd class="px-4 py-5">
+									<a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline line-clamp-2 mb-2">
+										«Назва тарифу дві строки з детальним описом всередині»
+									</a>
+									<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+										Назва документа дві строки з детальним описом всередині.doc
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Очікувана дата укладання</dt>
+								<dd class="px-4 py-5">
+									<p class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-2">
+										5 грудня
+									</p>
+									<p class="text-xs text-slate-500 dark:text-slate-400">
+										Цього тижня
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Платник за Х</dt>
+								<dd class="px-4 py-5">
+									<p class="block px-2 py-0.5 rounded-sm bg-red-500/5 border border-red-500/30 text-sm font-medium text-red-500 w-fit mb-2">
+										Наша компанія
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden"></dt>
+								<dd class="px-3 py-5 flex gap-3">
+									<a href="#" class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 hover:bg-blue-600/[0.16] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" fill="currentColor"></path>
+										</svg>
+									</a>
+									<button class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB] hover:bg-blue-600/[0.16]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path d="M3 10C3 9.17157 3.67157 8.5 4.5 8.5C5.32843 8.5 6 9.17157 6 10C6 10.8284 5.32843 11.5 4.5 11.5C3.67157 11.5 3 10.8284 3 10Z" fill="currentColor"></path>
+											<path d="M8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10Z" fill="currentColor"></path>
+											<path d="M15.5 8.5C14.6716 8.5 14 9.17157 14 10C14 10.8284 14.6716 11.5 15.5 11.5C16.3284 11.5 17 10.8284 17 10C17 9.17157 16.3284 8.5 15.5 8.5Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<!-- table item end -->
+						<!-- table item start -->
+						<div class="grid lg:grid-cols-[1fr_1fr_1fr_1fr_1fr_6.25rem] border-b border-slate-200 dark:border-slate-800 last:border-none hover:bg-blue-600/[0.16]">
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Дані клієнта</dt>
+								<dd class="pt-5 pr-4 pb-5 pl-3 flex items-start gap-3">
+									<label class="flex items-center cursor-pointer relative">
+										<input type="checkbox" class="peer !bg-none h-4 w-4 cursor-pointer transition-all appearance-none rounded-sm !bg-slate-100/50 dark:!bg-slate-800/50 border !border-slate-500 checked:!border-blue-600 checked:!bg-blue-600 !shadow-none focus:!ring-0" value="client-data" />
+										<span class="absolute opacity-0 text-slate-500 dark:text-slate-400 peer-checked:opacity-100 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+											<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-4 h-4 relative" preserveAspectRatio="none">
+												<path d="M13.3334 4L6.00008 11.3333L2.66675 8" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</span>
+									</label>
+
+									<div>
+										<a href="#" class="flex gap-2 items-center text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline mb-2">
+											<span class="line-clamp-1">Товариство з обмеженою
+												відповідальністю</span>
+										</a>
+										<div class="flex flex-col gap-1">
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												с. Затока
+											</p>
+											<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+												Одеська обл.
+											</p>
+										</div>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Статус та останні зміни</dt>
+								<dd class="px-4 py-5">
+									<p class="px-2 py-0.5 rounded-sm bg-blue-600/5 border border-blue-600/30 text-sm font-medium text-blue-600 w-fit mb-2">
+										Brand color
+									</p>
+									<div class="flex flex-col gap-1">
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											1 грудня, 11:08
+										</p>
+										<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+											Клієнт: Надіслано підписаний договір про зміну тарифа
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Тариф</dt>
+								<dd class="px-4 py-5">
+									<a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-50 hover:text-blue-600 hover:underline line-clamp-2 mb-2">
+										«Назва тарифу дві строки з детальним описом всередині»
+									</a>
+									<p class="text-xs text-slate-500 dark:text-slate-400 line-clamp-1">
+										Назва документа дві строки з детальним описом всередині.doc
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Очікувана дата укладання</dt>
+								<dd class="px-4 py-5">
+									<p class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-2">
+										5 грудня
+									</p>
+									<p class="text-xs text-slate-500 dark:text-slate-400">
+										Цього тижня
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden">Платник за Х</dt>
+								<dd class="px-4 py-5">
+									<p class="block px-2 py-0.5 rounded-sm bg-red-500/5 border border-red-500/30 text-sm font-medium text-red-500 w-fit mb-2">
+										Наша компанія
+									</p>
+								</dd>
+							</dl>
+							<dl>
+								<dt class="px-2 pt-1 text-sm font-medium text-slate-500 dark:text-slate-400 lg:hidden"></dt>
+								<dd class="px-3 py-5 flex gap-3">
+									<a href="#" class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg bg-white dark:bg-[#020617] border border-slate-200 dark:border-slate-800 hover:bg-blue-600/[0.16] text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 5.21967C8.51256 4.92678 8.98744 4.92678 9.28033 5.21967L13.5303 9.46967C13.8232 9.76256 13.8232 10.2374 13.5303 10.5303L9.28033 14.7803C8.98744 15.0732 8.51256 15.0732 8.21967 14.7803C7.92678 14.4874 7.92678 14.0126 8.21967 13.7197L11.9393 10L8.21967 6.28033C7.92678 5.98744 7.92678 5.51256 8.21967 5.21967Z" fill="currentColor"></path>
+										</svg>
+									</a>
+									<button class="flex justify-center items-center w-9 h-9 relative gap-2 px-4 py-2 rounded-lg text-[#0F172A] dark:text-[#F8FAFC] hover:text-[#2563EB] hover:bg-blue-600/[0.16]">
+										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-grow-0 flex-shrink-0 w-5 h-5 relative" preserveAspectRatio="xMidYMid meet">
+											<path d="M3 10C3 9.17157 3.67157 8.5 4.5 8.5C5.32843 8.5 6 9.17157 6 10C6 10.8284 5.32843 11.5 4.5 11.5C3.67157 11.5 3 10.8284 3 10Z" fill="currentColor"></path>
+											<path d="M8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10Z" fill="currentColor"></path>
+											<path d="M15.5 8.5C14.6716 8.5 14 9.17157 14 10C14 10.8284 14.6716 11.5 15.5 11.5C16.3284 11.5 17 10.8284 17 10C17 9.17157 16.3284 8.5 15.5 8.5Z" fill="currentColor"></path>
+										</svg>
+									</button>
+								</dd>
+							</dl>
+						</div>
+						<!-- table item end -->
+
+					</div>
+					<!-- table body end -->
+				</div>
+				<!-- table end -->
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js?_v=20241226173749"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js?_v=20241226173749"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js?_v=20241226173749"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js?_v=20241226173749"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?_v=20241226173749" />
+
+	<script src="js/app.min.js?_v=20241226173749"></script>
+</body>
+
+</html>
