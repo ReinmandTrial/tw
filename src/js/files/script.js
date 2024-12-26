@@ -51,12 +51,12 @@ var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
 } else {
-    themeToggleDarkIcon.classList.remove('hidden');
+    themeToggleDarkIcon?.classList?.remove('hidden');
 }
 
 var themeToggleBtn = document.getElementById('theme-toggle');
 
-themeToggleBtn.addEventListener('click', function() {
+themeToggleBtn?.addEventListener('click', function() {
 
     // toggle icons inside button
     themeToggleDarkIcon.classList.toggle('hidden');
