@@ -880,9 +880,6 @@ input:checked + .toggle-bg {
 .-left-\[19rem\] {
   left: -19rem
 }
-.-right-3 {
-  right: -.75rem
-}
 .bottom-0 {
   bottom: 0
 }
@@ -2691,9 +2688,12 @@ input:checked + .toggle-bg {
   --tw-bg-opacity: 1;
   background-color: rgb(228 228 231 / var(--tw-bg-opacity,1))
 }
-.group:hover .group-hover-\[\.current\]\:text-\[\#2563EB\] {
+.group\/item:hover .group-hover\/item\:text-\[\#2563EB\] {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity,1))
+}
+.group.closed .group-\[\.closed\]\:left-\[3\.5rem\] {
+  left: 3.5rem
 }
 .group.closed .group-\[\.closed\]\:mx-4 {
   margin-left: 1rem;
