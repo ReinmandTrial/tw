@@ -954,6 +954,10 @@ input:checked + .toggle-bg {
   margin-left: 1.5rem;
   margin-right: 1.5rem
 }
+.mx-\[0\.8125rem\] {
+  margin-left: .8125rem;
+  margin-right: .8125rem
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto
@@ -1802,6 +1806,10 @@ input:checked + .toggle-bg {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem
+}
+.px-\[1\.125rem\] {
+  padding-left: 1.125rem;
+  padding-right: 1.125rem
 }
 .py-0\.5 {
   padding-top: .125rem;
@@ -2699,10 +2707,6 @@ input:checked + .toggle-bg {
   margin-left: 1rem;
   margin-right: 1rem
 }
-.group.closed .group-\[\.closed\]\:mx-\[0\.8125rem\] {
-  margin-left: .8125rem;
-  margin-right: .8125rem
-}
 .group.closed .group-\[\.closed\]\:flex {
   display: flex
 }
@@ -2728,9 +2732,9 @@ input:checked + .toggle-bg {
   padding-left: 0;
   padding-right: 0
 }
-.group.closed .group-\[\.closed\]\:px-\[1\.125rem\] {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem
+.group.closed .group-\[\.closed\]\:py-2\.5 {
+  padding-top: .625rem;
+  padding-bottom: .625rem
 }
 .group.current .group-\[\.current\]\:text-\[\#2563EB\] {
   --tw-text-opacity: 1;
